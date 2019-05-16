@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DD2EBB496FD89A4DFC203BC /* Pods_smartRoomUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4A8C28FECD54F106B631C1 /* Pods_smartRoomUITests.framework */; };
+		81F28B9EB54E79FA51F6F189 /* Pods_smartRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904AE0FA437E74EEB4C09C10 /* Pods_smartRoom.framework */; };
+		C991FDE5913F6E775EAD473D /* Pods_smartRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567977C90144485982134FBA /* Pods_smartRoomTests.framework */; };
+		D1075DFC22676A5F000545A4 /* RoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1075DFB22676A5F000545A4 /* RoomController.swift */; };
+		D1075DFE22676F35000545A4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1075DFD22676F35000545A4 /* Room.swift */; };
+		D1E5158A2266CC81008A750E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E515892266CC81008A750E /* AppDelegate.swift */; };
+		D1E5158C2266CC81008A750E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E5158B2266CC81008A750E /* ViewController.swift */; };
+		D1E5158F2266CC81008A750E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E5158D2266CC81008A750E /* Main.storyboard */; };
+		D1E515922266CC82008A750E /* smartRoom.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1E515902266CC82008A750E /* smartRoom.xcdatamodeld */; };
+		D1E515942266CC84008A750E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1E515932266CC84008A750E /* Assets.xcassets */; };
+		D1E515972266CC84008A750E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E515952266CC84008A750E /* LaunchScreen.storyboard */; };
+		D1E515A22266CC84008A750E /* smartRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E515A12266CC84008A750E /* smartRoomTests.swift */; };
+		D1E515AD2266CC84008A750E /* smartRoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E515AC2266CC84008A750E /* smartRoomUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1E5159E2266CC84008A750E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1E5157E2266CC81008A750E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1E515852266CC81008A750E;
+			remoteInfo = smartRoom;
+		};
+		D1E515A92266CC84008A750E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1E5157E2266CC81008A750E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1E515852266CC81008A750E;
+			remoteInfo = smartRoom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A864784448F06E515035BF8 /* Pods-smartRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoomTests.release.xcconfig"; path = "Target Support Files/Pods-smartRoomTests/Pods-smartRoomTests.release.xcconfig"; sourceTree = "<group>"; };
+		5478E454E9E8459804C950B4 /* Pods-smartRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoomTests.debug.xcconfig"; path = "Target Support Files/Pods-smartRoomTests/Pods-smartRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		567977C90144485982134FBA /* Pods_smartRoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smartRoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823E7ACC21A539C63FEB0F00 /* Pods-smartRoomUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoomUITests.debug.xcconfig"; path = "Target Support Files/Pods-smartRoomUITests/Pods-smartRoomUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		89E6629F06CDA3FDF43FB595 /* Pods-smartRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoom.release.xcconfig"; path = "Target Support Files/Pods-smartRoom/Pods-smartRoom.release.xcconfig"; sourceTree = "<group>"; };
+		904AE0FA437E74EEB4C09C10 /* Pods_smartRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smartRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8355D96E907AECF42E96EEE /* Pods-smartRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoom.debug.xcconfig"; path = "Target Support Files/Pods-smartRoom/Pods-smartRoom.debug.xcconfig"; sourceTree = "<group>"; };
+		D1075DFB22676A5F000545A4 /* RoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomController.swift; sourceTree = "<group>"; };
+		D1075DFD22676F35000545A4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		D1E515862266CC81008A750E /* smartRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smartRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E515892266CC81008A750E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1E5158B2266CC81008A750E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1E5158E2266CC81008A750E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1E515912266CC82008A750E /* smartRoom.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = smartRoom.xcdatamodel; sourceTree = "<group>"; };
+		D1E515932266CC84008A750E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1E515962266CC84008A750E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1E515982266CC84008A750E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E5159D2266CC84008A750E /* smartRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smartRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E515A12266CC84008A750E /* smartRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smartRoomTests.swift; sourceTree = "<group>"; };
+		D1E515A32266CC84008A750E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E515A82266CC84008A750E /* smartRoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smartRoomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E515AC2266CC84008A750E /* smartRoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smartRoomUITests.swift; sourceTree = "<group>"; };
+		D1E515AE2266CC84008A750E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53BDA99ABAA1E52A2F1366F /* Pods-smartRoomUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smartRoomUITests.release.xcconfig"; path = "Target Support Files/Pods-smartRoomUITests/Pods-smartRoomUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EE4A8C28FECD54F106B631C1 /* Pods_smartRoomUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smartRoomUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1E515832266CC81008A750E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F28B9EB54E79FA51F6F189 /* Pods_smartRoom.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E5159A2266CC84008A750E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C991FDE5913F6E775EAD473D /* Pods_smartRoomTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E515A52266CC84008A750E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DD2EBB496FD89A4DFC203BC /* Pods_smartRoomUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56DC79C3A9ECBFF46E00033C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				904AE0FA437E74EEB4C09C10 /* Pods_smartRoom.framework */,
+				567977C90144485982134FBA /* Pods_smartRoomTests.framework */,
+				EE4A8C28FECD54F106B631C1 /* Pods_smartRoomUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		674AFD59E535331EAE48D143 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8355D96E907AECF42E96EEE /* Pods-smartRoom.debug.xcconfig */,
+				89E6629F06CDA3FDF43FB595 /* Pods-smartRoom.release.xcconfig */,
+				5478E454E9E8459804C950B4 /* Pods-smartRoomTests.debug.xcconfig */,
+				2A864784448F06E515035BF8 /* Pods-smartRoomTests.release.xcconfig */,
+				823E7ACC21A539C63FEB0F00 /* Pods-smartRoomUITests.debug.xcconfig */,
+				D53BDA99ABAA1E52A2F1366F /* Pods-smartRoomUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1E5157D2266CC81008A750E = {
+			isa = PBXGroup;
+			children = (
+				D1E515882266CC81008A750E /* smartRoom */,
+				D1E515A02266CC84008A750E /* smartRoomTests */,
+				D1E515AB2266CC84008A750E /* smartRoomUITests */,
+				D1E515872266CC81008A750E /* Products */,
+				674AFD59E535331EAE48D143 /* Pods */,
+				56DC79C3A9ECBFF46E00033C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D1E515872266CC81008A750E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1E515862266CC81008A750E /* smartRoom.app */,
+				D1E5159D2266CC84008A750E /* smartRoomTests.xctest */,
+				D1E515A82266CC84008A750E /* smartRoomUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1E515882266CC81008A750E /* smartRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D1E515892266CC81008A750E /* AppDelegate.swift */,
+				D1E5158B2266CC81008A750E /* ViewController.swift */,
+				D1E5158D2266CC81008A750E /* Main.storyboard */,
+				D1075DFB22676A5F000545A4 /* RoomController.swift */,
+				D1075DFD22676F35000545A4 /* Room.swift */,
+				D1E515932266CC84008A750E /* Assets.xcassets */,
+				D1E515952266CC84008A750E /* LaunchScreen.storyboard */,
+				D1E515982266CC84008A750E /* Info.plist */,
+				D1E515902266CC82008A750E /* smartRoom.xcdatamodeld */,
+			);
+			path = smartRoom;
+			sourceTree = "<group>";
+		};
+		D1E515A02266CC84008A750E /* smartRoomTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1E515A12266CC84008A750E /* smartRoomTests.swift */,
+				D1E515A32266CC84008A750E /* Info.plist */,
+			);
+			path = smartRoomTests;
+			sourceTree = "<group>";
+		};
+		D1E515AB2266CC84008A750E /* smartRoomUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D1E515AC2266CC84008A750E /* smartRoomUITests.swift */,
+				D1E515AE2266CC84008A750E /* Info.plist */,
+			);
+			path = smartRoomUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1E515852266CC81008A750E /* smartRoom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E515B12266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoom" */;
+			buildPhases = (
+				54AD55FA0CF7731F9263005A /* [CP] Check Pods Manifest.lock */,
+				D1E515822266CC81008A750E /* Sources */,
+				D1E515832266CC81008A750E /* Frameworks */,
+				D1E515842266CC81008A750E /* Resources */,
+				311B63F57177A0BFB69F6516 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = smartRoom;
+			productName = smartRoom;
+			productReference = D1E515862266CC81008A750E /* smartRoom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1E5159C2266CC84008A750E /* smartRoomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E515B42266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoomTests" */;
+			buildPhases = (
+				3BBBA033C2D278A92495FD1B /* [CP] Check Pods Manifest.lock */,
+				D1E515992266CC84008A750E /* Sources */,
+				D1E5159A2266CC84008A750E /* Frameworks */,
+				D1E5159B2266CC84008A750E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1E5159F2266CC84008A750E /* PBXTargetDependency */,
+			);
+			name = smartRoomTests;
+			productName = smartRoomTests;
+			productReference = D1E5159D2266CC84008A750E /* smartRoomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D1E515A72266CC84008A750E /* smartRoomUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1E515B72266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoomUITests" */;
+			buildPhases = (
+				7D403D9AE5D42239E45AE2AB /* [CP] Check Pods Manifest.lock */,
+				D1E515A42266CC84008A750E /* Sources */,
+				D1E515A52266CC84008A750E /* Frameworks */,
+				D1E515A62266CC84008A750E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1E515AA2266CC84008A750E /* PBXTargetDependency */,
+			);
+			name = smartRoomUITests;
+			productName = smartRoomUITests;
+			productReference = D1E515A82266CC84008A750E /* smartRoomUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1E5157E2266CC81008A750E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = aryaMirshafii;
+				TargetAttributes = {
+					D1E515852266CC81008A750E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D1E5159C2266CC84008A750E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D1E515852266CC81008A750E;
+					};
+					D1E515A72266CC84008A750E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D1E515852266CC81008A750E;
+					};
+				};
+			};
+			buildConfigurationList = D1E515812266CC81008A750E /* Build configuration list for PBXProject "smartRoom" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1E5157D2266CC81008A750E;
+			productRefGroup = D1E515872266CC81008A750E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1E515852266CC81008A750E /* smartRoom */,
+				D1E5159C2266CC84008A750E /* smartRoomTests */,
+				D1E515A72266CC84008A750E /* smartRoomUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1E515842266CC81008A750E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E515972266CC84008A750E /* LaunchScreen.storyboard in Resources */,
+				D1E515942266CC84008A750E /* Assets.xcassets in Resources */,
+				D1E5158F2266CC81008A750E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E5159B2266CC84008A750E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E515A62266CC84008A750E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311B63F57177A0BFB69F6516 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-smartRoom/Pods-smartRoom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-smartRoom/Pods-smartRoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BBBA033C2D278A92495FD1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smartRoomTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54AD55FA0CF7731F9263005A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smartRoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D403D9AE5D42239E45AE2AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-smartRoomUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1E515822266CC81008A750E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1075DFC22676A5F000545A4 /* RoomController.swift in Sources */,
+				D1E515922266CC82008A750E /* smartRoom.xcdatamodeld in Sources */,
+				D1E5158C2266CC81008A750E /* ViewController.swift in Sources */,
+				D1E5158A2266CC81008A750E /* AppDelegate.swift in Sources */,
+				D1075DFE22676F35000545A4 /* Room.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E515992266CC84008A750E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E515A22266CC84008A750E /* smartRoomTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1E515A42266CC84008A750E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E515AD2266CC84008A750E /* smartRoomUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1E5159F2266CC84008A750E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1E515852266CC81008A750E /* smartRoom */;
+			targetProxy = D1E5159E2266CC84008A750E /* PBXContainerItemProxy */;
+		};
+		D1E515AA2266CC84008A750E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1E515852266CC81008A750E /* smartRoom */;
+			targetProxy = D1E515A92266CC84008A750E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1E5158D2266CC81008A750E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1E5158E2266CC81008A750E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1E515952266CC84008A750E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1E515962266CC84008A750E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1E515AF2266CC84008A750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D1E515B02266CC84008A750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1E515B22266CC84008A750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8355D96E907AECF42E96EEE /* Pods-smartRoom.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1E515B32266CC84008A750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89E6629F06CDA3FDF43FB595 /* Pods-smartRoom.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1E515B52266CC84008A750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5478E454E9E8459804C950B4 /* Pods-smartRoomTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smartRoom.app/smartRoom";
+			};
+			name = Debug;
+		};
+		D1E515B62266CC84008A750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A864784448F06E515035BF8 /* Pods-smartRoomTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smartRoom.app/smartRoom";
+			};
+			name = Release;
+		};
+		D1E515B82266CC84008A750E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823E7ACC21A539C63FEB0F00 /* Pods-smartRoomUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smartRoom;
+			};
+			name = Debug;
+		};
+		D1E515B92266CC84008A750E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53BDA99ABAA1E52A2F1366F /* Pods-smartRoomUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
+				INFOPLIST_FILE = smartRoomUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = aryaMirshafii.smartRoomUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smartRoom;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1E515812266CC81008A750E /* Build configuration list for PBXProject "smartRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E515AF2266CC84008A750E /* Debug */,
+				D1E515B02266CC84008A750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E515B12266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E515B22266CC84008A750E /* Debug */,
+				D1E515B32266CC84008A750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E515B42266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E515B52266CC84008A750E /* Debug */,
+				D1E515B62266CC84008A750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1E515B72266CC84008A750E /* Build configuration list for PBXNativeTarget "smartRoomUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E515B82266CC84008A750E /* Debug */,
+				D1E515B92266CC84008A750E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1E515902266CC82008A750E /* smartRoom.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1E515912266CC82008A750E /* smartRoom.xcdatamodel */,
+			);
+			currentVersion = D1E515912266CC82008A750E /* smartRoom.xcdatamodel */;
+			path = smartRoom.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D1E5157E2266CC81008A750E /* Project object */;
+}

@@ -1,0 +1,88 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: room-api
+
+custom:
+  roomsTableName: 'java-products-${self:provider.stage}'
+
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - { "Fn::GetAtt": ["RoomsDynamoDBTable", "Arn" ] }
+  environment:
+    ROOMS_TABLE_NAME: ${self:custom.roomsTableName}
+
+package:
+  artifact: 'target/${self:service}-${self:provider.stage}.jar'
+
+functions:
+  listRoom:
+    handler: com.serverless.ListRoomsHandler
+    events:
+      - http:
+          path: /rooms
+          method: get
+  getRoom:
+    handler: com.serverless.GetRoomHandler
+    events:
+      - http:
+          path: /rooms/{id}
+          method: get
+  createRoom:
+    handler: com.serverless.CreateRoomHandler
+    events:
+      - http:
+          path: /rooms
+          method: post
+  deleteRoom:
+    handler: com.serverless.DeleteRoomHandler
+    events:
+      - http:
+          path: /rooms/{id}
+          method: delete
+  updateRoom:
+    handler: com.serverless.PutRoomHandler
+    events:
+      - http:
+          path: /rooms/{id}
+          method: put
+
+
+resources:
+  Resources:
+    RoomsDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.roomsTableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

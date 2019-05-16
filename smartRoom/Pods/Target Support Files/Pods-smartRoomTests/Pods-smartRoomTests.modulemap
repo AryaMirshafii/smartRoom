@@ -1,0 +1,6 @@
+framework module Pods_smartRoomTests {
+  umbrella header "Pods-smartRoomTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
