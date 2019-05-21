@@ -33,6 +33,7 @@ export default class Register extends Component {
     }
     constructor(props) {
         super(props);
+        this.postUrl = 'https://sgje19f2bj.execute-api.us-east-1.amazonaws.com/dev/users';
         this.state = {
             firstName   : '',
             lastName: '',
@@ -41,6 +42,10 @@ export default class Register extends Component {
             password2:'',
         }
     }
+
+
+
+
 
     onClickListener = (viewId) => {
         Alert.alert("Alert", "Button pressed "+viewId);
@@ -64,17 +69,45 @@ export default class Register extends Component {
             );
         }else{
 
+            this._storeData().then((dummy) => {
+                //this callback is executed when your Promise is resolved
 
-            _storeData = async () => {
-                try {
-                    await AsyncStorage.setItem('firstName', this.state.firstName);
-                    await AsyncStorage.setItem('lastName', this.state.lastName);
-                    await AsyncStorage.setItem('email', this.state.email);
-                    await AsyncStorage.setItem('password', this.state.password1);
-                } catch (error) {
-                    // Error saving data
-                }
-            };
+                console.log("POSTING DATA..............");
+
+
+
+
+
+
+                fetch(this.postUrl, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        firstName: this.state.firstName,
+                        lastName: this.state.lastName,
+                        email: this.state.email,
+                        password: this.state.password1,
+                        roomIds:'',
+                    }),
+                }).then((response) => response.json())
+                    .then((responseJson) => {
+                        return responseJson.movies;
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+                console.log("POSTED DATA................")
+
+
+            }).catch((error) => {
+                //this callback is executed when your Promise is rejected
+                console.log('Promise is rejected with error: ' + error);
+            });
+
+
 
             console.log("YOUR PASSWORDS DO MATCH........");
 
@@ -84,6 +117,21 @@ export default class Register extends Component {
         }
 
     }
+
+    _storeData = async () => {
+        try {
+            await AsyncStorage.setItem('firstName', this.state.firstName);
+            await AsyncStorage.setItem('lastName', this.state.lastName);
+            await AsyncStorage.setItem('email', this.state.email);
+            await AsyncStorage.setItem('password', this.state.password1);
+
+
+
+        } catch (error) {
+            // Error saving data
+        }
+    };
+    
 
     render() {
 

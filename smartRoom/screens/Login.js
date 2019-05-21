@@ -35,21 +35,65 @@ export default class Login extends Component {
     constructor(props) {
 
         super(props);
-
+        this.postUrl = 'https://sgje19f2bj.execute-api.us-east-1.amazonaws.com/dev/users';
         this.state = {
+            firstName:'',
+            lastName:'',
             email:'',
             password:'',
+
         }
+        this.apiFirstNames = [];
+        this.apiLastNames = [];
+        this.apiEmails = [];
+        this.apiPasswords = [];
+    }
+
+    componentDidMount = () => {
+        fetch(this.postUrl, {
+            method: 'GET'
+        })
+            .then((response) => response.json())
+            .then((responseJson) => {
+                console.log(responseJson);
+
+                for(var i = 0; i < responseJson.length; i++){
+
+                    console.log("pushing " + responseJson[i]['firstName'] + "to the first names list");
+                    console.log("pushing " + responseJson[i]['lastName'] + "to the last names list");
+                    console.log("pushing " + responseJson[i]['email'] + "to the emails list");
+                    console.log("pushing " + responseJson[i]['password'] + "to the password list");
+
+
+
+
+                    this.apiFirstNames.push(responseJson[i]['firstName'].slice(1, -1));
+                    this.apiLastNames.push( responseJson[i]['lastName'].slice(1, -1));
+                    this.apiEmails.push(responseJson[i]['email'].slice(1, -1));
+                    this.apiPasswords.push(responseJson[i]['password'].slice(1, -1))
+                }
+
+
+
+
+
+
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
 
     _retrieveData = async () => {
         try {
-
+            var {navigate} = this.props.navigation;
             const email = await AsyncStorage.getItem('email');
             const password = await AsyncStorage.getItem('password');
             if (email !== null && password !== null) {
-                var {navigate} = this.props.navigation;
+
+
+
                 console.log("Saved Email is: " + email + "\n");
                 console.log("Saved Password is: " + password + "\n");
 
@@ -107,6 +151,24 @@ export default class Login extends Component {
 
 
 
+
+            }else{
+                console.log("You dont have a password or Email");
+
+                Alert.alert(
+                    'You Are Not Registered',
+                    'Would you like to register or try again?',
+                    [
+
+                        {
+                            text: 'Register',
+                            onPress: ()=>navigate("Second", {}),
+                            style: 'cancel',
+                        },
+                        {text: 'OK', onPress: () => console.log('OK Pressed')},
+                    ],
+                    {cancelable: false},
+                );
             }
         } catch (error) {
             // Error retrieving data
@@ -125,11 +187,76 @@ export default class Login extends Component {
 
 
 
+
+    _userFoundinAPI = async () => {
+        try {
+            await AsyncStorage.setItem('firstName', this.state.firstName);
+            await AsyncStorage.setItem('lastName', this.state.lastName);
+            await AsyncStorage.setItem('email', this.state.email);
+            await AsyncStorage.setItem('password', this.state.password);
+
+
+
+        } catch (error) {
+            // Error saving data
+        }
+    };
+
+
     verify = () => {
         var {navigate} = this.props.navigation;
         //console.log(typeof this.loginManager);
         console.log("Email is: " + this.state.email + "\n");
         console.log("Password is: " + this.state.password + "\n");
+        var i = 0;
+        var j = 0;
+        var userFound = false;
+        console.log("Pre loop")
+        console.log(this.apiEmails.length)
+        while(i < this.apiEmails.length && j < this.apiPasswords.length){
+            console.log("State email is: " + this.state.email + "      apiEmail is: " + this.apiEmails[i] );
+            console.log("State password is: " + this.state.password + "      apiPassword is: " + this.apiPasswords[i] );
+            if(this.state.email === this.apiEmails[i]
+                && this.state.password === this.apiPasswords[i]){
+                console.log("FOUND!!!!!!!!!!")
+                this.setState({
+                    firstName: this.apiFirstNames[i],
+                    lastName: this.apiLastNames[i],
+                    email: this.apiEmails[i],
+                    password: this.apiPasswords[i],
+
+
+                });
+
+
+                this._userFoundinAPI().then((dummy) => {
+                    console.log("User exists in api. Saving.........")
+                    navigate("Third", {});
+                    userFound = true;
+                    this._storeData().then((dummy) => {
+                        console.log("stored login state!")
+
+
+                    }).catch((error) => {
+                        //this callback is executed when your Promise is rejected
+                        console.log('Promise is rejected with error: ' + error);
+                    });
+
+                }).catch((error) => {
+                    //this callback is executed when your Promise is rejected
+                    console.log('Promise is rejected with error: ' + error);
+                });
+            }else{
+                console.log("NOOOOOOO");
+            }
+            i++;
+            j++;
+        }
+        console.log("Post loop")
+
+
+
+
         this._retrieveData().then((dummy) => {
             //this callback is executed when your Promise is resolved
 
@@ -139,7 +266,11 @@ export default class Login extends Component {
             //this callback is executed when your Promise is rejected
             console.log('Promise is rejected with error: ' + error);
         });
-        /*
+
+
+
+        /**
+
         const email =  AsyncStorage.getItem('email');
         const password =  AsyncStorage.getItem('password');
         console.log("Saved Email is: " + email + "\n");
@@ -262,7 +393,7 @@ export default class Login extends Component {
             console.log('Promise is rejected with error: ' + error);
         });
 
-         
+
 
 
         return (
