@@ -55,7 +55,7 @@ export default class RoomView extends React.Component {
 
 
         return (
-            <View style={styles.mainView}>
+            <ScrollView style={styles.mainView}>
 
 
                 <View style={styles.mainView}>
@@ -153,7 +153,7 @@ export default class RoomView extends React.Component {
 
 
 
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
 
         marginLeft:edgeMargin,
         left: 0,
-        marginTop:220,
+        marginTop:-50,
         //flexDirection: "row"
         justifyContent: 'space-between'
     },

@@ -40,6 +40,7 @@ public class PutRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
                 room.setLongitude((float) body.get("longitude").asDouble());
                 room.setSongPlaying(body.get("songPlaying").asText());
                 room.setParentUser(body.get("parentUser").asText());
+                room.setName(body.get("name").asText());
                 room.save(room);
 
 
@@ -58,10 +59,10 @@ public class PutRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
                         .build();
             }
         } catch (Exception ex) {
-            logger.error("Error in retrieving product: " + ex);
+            logger.error("Error in retrieving room: " + ex);
 
             // send the error response back
-            Response responseBody = new Response("Error in retrieving room: ", input);
+            Response responseBody = new Response("Error in retrieving room:  " + ex.toString(), input);
             return ApiGatewayResponse.builder()
                     .setStatusCode(500)
                     .setObjectBody(responseBody)

@@ -20,7 +20,7 @@ const squareSide = (Dimensions.get('window').width)/2 - 40;
 export default class Room extends React.Component {
 
     static navigationOptions = {
-        title: 'Room Info',
+        title: 'Room',
         headerStyle: {
             backgroundColor: '#000000'
         },
@@ -51,7 +51,7 @@ export default class Room extends React.Component {
         //this.props.navigation
         var {navigate} = this.props.navigation;
         return (
-            <View style={styles.mainView}>
+            <ScrollView style={styles.mainView}>
 
                 <View style={styles.mainView}>
 
@@ -90,7 +90,7 @@ export default class Room extends React.Component {
 
                         <View style={buttonStyles.buttonRow}>
                             <TouchableOpacity style={buttonStyles.leftButton} onPress={
-                                ()=>navigate("Fourth", {})
+                                ()=>navigate("Fifth", {})
 
 
 
@@ -148,7 +148,7 @@ export default class Room extends React.Component {
 
 
 
-            </View>
+            </ScrollView>
         );
     }
 }

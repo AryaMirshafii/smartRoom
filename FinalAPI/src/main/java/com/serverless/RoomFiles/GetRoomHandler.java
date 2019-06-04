@@ -22,11 +22,19 @@ public class GetRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
         Map<String,String> pathParameters =  (Map<String,String>)input.get("pathParameters");
         String roomID = pathParameters.get("id");
 
+
+
+
         // get the Product by id
         Room room = new Room().get(roomID);
 
+
         // send the response back
         if (room != null) {
+
+            room.setName(room.getName().replace("\"", ""));
+            room.setSongPlaying(room.getSongPlaying().replace("\"", ""));
+            room.setParentUser(room.getParentUser().replace("\"", ""));
           return ApiGatewayResponse.builder()
       				.setStatusCode(200)
       				.setObjectBody(room)

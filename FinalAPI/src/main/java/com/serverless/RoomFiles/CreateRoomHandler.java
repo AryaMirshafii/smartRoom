@@ -45,6 +45,7 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 		  room.setLongitude((float) body.get("longitude").asDouble());
 		  room.setSongPlaying(body.get("songPlaying").asText());
 		  room.setParentUser(body.get("parentUser").asText());
+		  room.setName(body.get("name").asText());
 		  room.save(room);
 
 		  /**

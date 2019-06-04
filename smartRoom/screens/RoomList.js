@@ -11,6 +11,7 @@ const edgeMargin = 20;
 const squareSide = (Dimensions.get('window').width)/2 - 40;
 
 
+/*
 const roomData = [{
 
         roomName: 'Bedroom',
@@ -21,8 +22,15 @@ const roomData = [{
         key:1
 
 }
-];
+];*/
+const roomData = [
+    {
 
+    name: 'Add Room',
+    key:0
+
+    },
+]
 
 
 export default class RoomList extends React.Component {
@@ -42,6 +50,62 @@ export default class RoomList extends React.Component {
 
     }
 
+    constructor(props) {
+        super(props);
+        this.userUrl = 'https://o45okrguj2.execute-api.us-east-1.amazonaws.com/dev/users';
+        this.hasRooms = false;
+    }
+
+    getData = async () => {
+        try {
+            this.userId = await AsyncStorage.getItem('id');
+
+        } catch (error) {
+            // Error retrieving data
+        }
+    };
+
+
+
+    componentDidMount = () => {
+        this.getData().then(() =>{
+            this.userUrl = this.userUrl + this.userId
+            var {navigate} = this.props.navigation;
+            fetch(this.userUrl, {
+                method: 'GET'
+            })
+                .then((response) => response.json())
+                .then((responseJson) => {
+                    console.log(responseJson);
+
+                    for(var i = 0; i < responseJson.length; i++){
+                        let roomIds = responseJson[i]["roomIds"];
+                        console.log("Room ids for this user are: " + roomIds);
+
+
+
+                        if(roomIds ===   "\[\"\"]" ) {
+                            console.log("Room ids for this user are: room ids are empty");
+
+                        }else{
+                            this.hasRooms = true;
+                        }
+                    }
+
+
+
+
+
+
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+            }
+
+        )
+
+    }
 
 
 
@@ -51,19 +115,47 @@ export default class RoomList extends React.Component {
         var {navigate} = this.props.navigation;
         const dummyRoom1 = new Room("Bedroom", 0);
         const dummyRoom2 = new Room("Kitchen", 1);
+
+        if(this.hasRooms){
+            return (
+                <FlatList
+                    style = {styles.mainView}
+                    data={roomData}
+                    renderItem={({item}) =>
+
+                        <TouchableOpacity style={styles.roomListItem} onPress={
+                            ()=>navigate("Fourth", {
+                                roomName: item.name,
+                            })
+
+                        }>
+                            <Text style = {styles.roomListText}>{item.roomName}</Text>
+                        </TouchableOpacity>
+
+
+
+
+                    }
+                    keyExtractor={(item, index) => index.toString()}
+
+
+                />
+            );
+        }
+
         return (
             <FlatList
                 style = {styles.mainView}
                 data={roomData}
                 renderItem={({item}) =>
 
-                    <TouchableOpacity style={styles.roomListItem} onPress={
-                        ()=>navigate("Fourth", {
-                            roomName: item.name,
+                    <TouchableOpacity style={styles.roomListItem}onPress={
+                        ()=>navigate("AddRoom", {
+
                         })
 
                     }>
-                        <Text style = {styles.roomListText}>{item.roomName}</Text>
+                        <Text style = {styles.roomListText}>{item.name}</Text>
                     </TouchableOpacity>
 
 
@@ -75,6 +167,8 @@ export default class RoomList extends React.Component {
 
             />
         );
+
+
     }
 }
 

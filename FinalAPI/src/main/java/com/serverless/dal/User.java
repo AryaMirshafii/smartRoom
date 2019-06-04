@@ -69,6 +69,7 @@ public class User {
 
 
     @DynamoDBAttribute(attributeName = "lastName")
+
     public String getLastName() {
         return this.lastName;
     }

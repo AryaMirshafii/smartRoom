@@ -13,6 +13,9 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* SmartRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SmartRoomTests.m */; };
+		0AD603571D2E423DAB764005 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A0209177E2D4AE9A6BCD520 /* Octicons.ttf */; };
+		0E849673328F4089ACD2F927 /* libRNTrackPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A431B548CA9445A79ACC4DC2 /* libRNTrackPlayer.a */; };
+		104B99F8A3D342818F73B715 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFA20A4F4098431AB4B425BF /* FontAwesome5_Regular.ttf */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -23,6 +26,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		186D23A7EFFD4ECDAA0EF3F1 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0C47517B64A4E19BFADDE75 /* SimpleLineIcons.ttf */; };
+		1D522476FEA825F7F7EB8525 /* libPods-SmartRoom-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 055E6BE0F63640E393EF77FB /* libPods-SmartRoom-tvOSTests.a */; };
+		20E1F73CF2CC473DABCC7D22 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60DADFA084440B1A5B2322C /* Entypo.ttf */; };
+		217356D66F96472C953D2B51 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE9930E12AB4CF5B4931746 /* libRNVectorIcons-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -36,12 +43,36 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* SmartRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SmartRoomTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		3455C9D5452F4D749EA72AAB /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03E2A0260B2B44F38BE9591A /* FontAwesome5_Solid.ttf */; };
+		360AD074684445B59918818F /* libBleClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F9C6CCBB7641EFA44469BB /* libBleClient.a */; };
+		36C2F7F1F102101AF83ABFE8 /* libPods-SmartRoom-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 260B26FD25712B70D559B471 /* libPods-SmartRoom-tvOS.a */; };
+		392242DDED6CC71285F87859 /* Pods_SmartRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD0043E3CA1971E24A6E56C /* Pods_SmartRoom.framework */; };
+		3CEAEFDEC672402091E2D68C /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D8F98D688B4BD5AD034316 /* MaterialCommunityIcons.ttf */; };
+		3D344221B5884E738FE8B47C /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4B712E5AC9542F085DEC6EC /* Ionicons.ttf */; };
+		42ED95F4A5144585A7A9B73A /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E024F936495B47568ABE6B7E /* EvilIcons.ttf */; };
+		4F1AF0DE532B4AA8B493340A /* libRNReactNativeGetMusicFiles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFA2690A067483EA2B64DBD /* libRNReactNativeGetMusicFiles.a */; };
+		522138365E554E27974C40D2 /* libMusicControl-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6674181EEDFC4FC38C71C877 /* libMusicControl-tvOS.a */; };
+		525B2D2B37F049748C7B6FB8 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42731E537464A3686277EAD /* Zocial.ttf */; };
+		5A4AE6D779FB4F05B980B342 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A3A9B1DC3194273975AFB63 /* FontAwesome.ttf */; };
+		67ADEF38A4F540368233FEFE /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54E55348E444DADA86E4A28 /* libRNVectorIcons.a */; };
+		8022DAEA6EC0445FB6313652 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C1A7209D5423BB11883FD /* Feather.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8E68EC816CF4417195BE97B2 /* libRNAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6855CABC9DC4C7FA2D7D5A6 /* libRNAudio.a */; };
+		927B4E3B793944C193B177D1 /* libRNiTunes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 096908898DDC4EE7AC79D081 /* libRNiTunes.a */; };
+		A5B3675909284DD193607E29 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 211BB2C555EA4EF09A4F0F6C /* FontAwesome5_Brands.ttf */; };
+		A93B6EC0AA1447378E4E2B29 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B6954DE504C0A8078FA5F /* MaterialIcons.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		AE2B2E1E9E554012803490E1 /* libMusicControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA04BCFC91D84D7C8DBF181D /* libMusicControl.a */; };
+		BD7EF810A99E485584B6CBB2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5778FE1C25254FFB882B6BFA /* Foundation.ttf */; };
 		D008D95E0B1F400CB1AC7420 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7385E4EC1FB48FBB48230FF /* libRNGestureHandler.a */; };
+		D1801E05229B0AA1008C33C5 /* addingSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1801E04229B0AA1008C33C5 /* addingSwift.swift */; };
+		D1E4A2A4229E1791000F6D7A /* BluetoothSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4A2A3229E1791000F6D7A /* BluetoothSpeaker.swift */; };
+		D1E4A2D1229E17CC000F6D7A /* BlueoothSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E4A2D0229E17CC000F6D7A /* BlueoothSpeaker.m */; };
+		D91C71385E804FD49650E849 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D2A2F2D133642588E869CE6 /* AntDesign.ttf */; };
 		DCAC297FFD2A412DB44A3180 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79360D1C31F3444E9B14E0C0 /* libRNGestureHandler-tvOS.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		F86AA72E1370ACD8C7DAAF07 /* Pods_SmartRoomTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BC0DB6198BD727A0C640E7 /* Pods_SmartRoomTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +321,55 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		D1364AB022A329590047C386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4101C655286C44A6AE4B475E /* RNTrackPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9B0E28291F07D76F00B71D2A;
+			remoteInfo = RNTrackPlayer;
+		};
+		D1364AB422A329590047C386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294B91CB62694D5EA41B7114 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
+		D1364AB622A329590047C386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 294B91CB62694D5EA41B7114 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
+			remoteInfo = "RNVectorIcons-tvOS";
+		};
+		D1364ABC22A3295A0047C386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B52E8F5C648645FA9BE7F684 /* MusicControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = MusicControl;
+		};
+		D1364ABE22A3295A0047C386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B52E8F5C648645FA9BE7F684 /* MusicControl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A3FC285E1EA7A8350097B6A9;
+			remoteInfo = "MusicControl-tvOS";
+		};
+		D153C8E3229C7DDB00FEA534 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47AF5145C35A408080267F83 /* RNiTunes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FFEC319C1C46B4EB0080A80E;
+			remoteInfo = RNiTunes;
+		};
+		D1801DC5229B04AC008C33C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AA5BF588F7745368F16C186 /* BleClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D73F06E81D48E17B00AD5963;
+			remoteInfo = BleClient;
+		};
 		D189DD0E2290B65700ADD5A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -332,6 +412,20 @@
 			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
 			remoteInfo = "RNGestureHandler-tvOS";
 		};
+		D1E4A251229DFC22000F6D7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFCBCDBDA523409585B27C94 /* RNReactNativeGetMusicFiles.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNReactNativeGetMusicFiles;
+		};
+		D1E4A290229E033D000F6D7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 098C0E20E7E647E58869969D /* RNAudio.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42F559BA1CFC90C400DC3F84;
+			remoteInfo = RNAudio;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -344,6 +438,11 @@
 		00E356EE1AD99517003FC87E /* SmartRoomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartRoomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SmartRoomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartRoomTests.m; sourceTree = "<group>"; };
+		03E2A0260B2B44F38BE9591A /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		055E6BE0F63640E393EF77FB /* libPods-SmartRoom-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartRoom-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		096908898DDC4EE7AC79D081 /* libRNiTunes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNiTunes.a; sourceTree = "<group>"; };
+		098C0E20E7E647E58869969D /* RNAudio.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAudio.xcodeproj; path = "../node_modules/react-native-audio-player-recorder/ios/RNAudio.xcodeproj"; sourceTree = "<group>"; };
+		0DD0043E3CA1971E24A6E56C /* Pods_SmartRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SmartRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,18 +453,60 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SmartRoom/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SmartRoom/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1D4C1A7209D5423BB11883FD /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		1F8B6954DE504C0A8078FA5F /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		211BB2C555EA4EF09A4F0F6C /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		215028D2DC2D057C84BD88D8 /* Pods-SmartRoomTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoomTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoomTests/Pods-SmartRoomTests.debug.xcconfig"; sourceTree = "<group>"; };
+		260B26FD25712B70D559B471 /* libPods-SmartRoom-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartRoom-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26416CAB0A2E61921DA7727E /* Pods-SmartRoom-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SmartRoom-tvOSTests/Pods-SmartRoom-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		27B4DC8137AEC31CB93F8719 /* Pods-SmartRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom.release.xcconfig"; path = "Target Support Files/Pods-SmartRoom/Pods-SmartRoom.release.xcconfig"; sourceTree = "<group>"; };
+		294B91CB62694D5EA41B7114 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SmartRoom-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmartRoom-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SmartRoom-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SmartRoom-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37472CF1C60F76D908661B33 /* Pods-SmartRoom-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SmartRoom-tvOS/Pods-SmartRoom-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		3BBE17C53951556445FD3185 /* Pods-SmartRoom-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoom-tvOSTests/Pods-SmartRoom-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4101C655286C44A6AE4B475E /* RNTrackPlayer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTrackPlayer.xcodeproj; path = "../node_modules/react-native-track-player/ios/RNTrackPlayer.xcodeproj"; sourceTree = "<group>"; };
+		47AF5145C35A408080267F83 /* RNiTunes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNiTunes.xcodeproj; path = "../node_modules/react-native-itunes/RNiTunes.xcodeproj"; sourceTree = "<group>"; };
+		4A3A9B1DC3194273975AFB63 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		5778FE1C25254FFB882B6BFA /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		5EFA2690A067483EA2B64DBD /* libRNReactNativeGetMusicFiles.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNReactNativeGetMusicFiles.a; sourceTree = "<group>"; };
+		6674181EEDFC4FC38C71C877 /* libMusicControl-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libMusicControl-tvOS.a"; sourceTree = "<group>"; };
+		69F9C6CCBB7641EFA44469BB /* libBleClient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBleClient.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		79360D1C31F3444E9B14E0C0 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
+		7AA5BF588F7745368F16C186 /* BleClient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BleClient.xcodeproj; path = "../node_modules/react-native-ble-plx/ios/BleClient.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8D2A2F2D133642588E869CE6 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		973EC841A343F112A2FAF5D4 /* Pods-SmartRoom-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoom-tvOS/Pods-SmartRoom-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9A0209177E2D4AE9A6BCD520 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		A431B548CA9445A79ACC4DC2 /* libRNTrackPlayer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTrackPlayer.a; sourceTree = "<group>"; };
+		A60DADFA084440B1A5B2322C /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		A7385E4EC1FB48FBB48230FF /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B4B712E5AC9542F085DEC6EC /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		B52E8F5C648645FA9BE7F684 /* MusicControl.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = MusicControl.xcodeproj; path = "../node_modules/react-native-music-control/ios/MusicControl.xcodeproj"; sourceTree = "<group>"; };
+		BA04BCFC91D84D7C8DBF181D /* libMusicControl.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libMusicControl.a; sourceTree = "<group>"; };
+		C6855CABC9DC4C7FA2D7D5A6 /* libRNAudio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAudio.a; sourceTree = "<group>"; };
+		CC52FBBDA139469BBE717436 /* Pods-SmartRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom.debug.xcconfig"; path = "Target Support Files/Pods-SmartRoom/Pods-SmartRoom.debug.xcconfig"; sourceTree = "<group>"; };
+		CC9B77DE07964899A7D6CD51 /* Pods-SmartRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoomTests.release.xcconfig"; path = "Target Support Files/Pods-SmartRoomTests/Pods-SmartRoomTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1801E03229B0AA1008C33C5 /* SmartRoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartRoom-Bridging-Header.h"; sourceTree = "<group>"; };
+		D1801E04229B0AA1008C33C5 /* addingSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addingSwift.swift; sourceTree = "<group>"; };
+		D1E4A2A3229E1791000F6D7A /* BluetoothSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSpeaker.swift; sourceTree = "<group>"; };
+		D1E4A2D0229E17CC000F6D7A /* BlueoothSpeaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueoothSpeaker.m; sourceTree = "<group>"; };
+		D54E55348E444DADA86E4A28 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		DBE9930E12AB4CF5B4931746 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
+		DFA20A4F4098431AB4B425BF /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		E024F936495B47568ABE6B7E /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		E0C47517B64A4E19BFADDE75 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		E6BC0DB6198BD727A0C640E7 /* Pods_SmartRoomTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoomTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F0F82D27565244AB91A963F9 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
+		F42731E537464A3686277EAD /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		F9D8F98D688B4BD5AD034316 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		FFCBCDBDA523409585B27C94 /* RNReactNativeGetMusicFiles.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNReactNativeGetMusicFiles.xcodeproj; path = "../node_modules/react-native-get-music-files/ios/RNReactNativeGetMusicFiles.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				F86AA72E1370ACD8C7DAAF07 /* Pods_SmartRoomTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +537,14 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				D008D95E0B1F400CB1AC7420 /* libRNGestureHandler.a in Frameworks */,
+				360AD074684445B59918818F /* libBleClient.a in Frameworks */,
+				927B4E3B793944C193B177D1 /* libRNiTunes.a in Frameworks */,
+				4F1AF0DE532B4AA8B493340A /* libRNReactNativeGetMusicFiles.a in Frameworks */,
+				8E68EC816CF4417195BE97B2 /* libRNAudio.a in Frameworks */,
+				AE2B2E1E9E554012803490E1 /* libMusicControl.a in Frameworks */,
+				0E849673328F4089ACD2F927 /* libRNTrackPlayer.a in Frameworks */,
+				67ADEF38A4F540368233FEFE /* libRNVectorIcons.a in Frameworks */,
+				392242DDED6CC71285F87859 /* Pods_SmartRoom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +562,9 @@
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 				DCAC297FFD2A412DB44A3180 /* libRNGestureHandler-tvOS.a in Frameworks */,
+				522138365E554E27974C40D2 /* libMusicControl-tvOS.a in Frameworks */,
+				217356D66F96472C953D2B51 /* libRNVectorIcons-tvOS.a in Frameworks */,
+				36C2F7F1F102101AF83ABFE8 /* libPods-SmartRoom-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
+				1D522476FEA825F7F7EB8525 /* libPods-SmartRoom-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +669,28 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				D1801E04229B0AA1008C33C5 /* addingSwift.swift */,
+				D1801E03229B0AA1008C33C5 /* SmartRoom-Bridging-Header.h */,
+				D1E4A2A3229E1791000F6D7A /* BluetoothSpeaker.swift */,
+				D1E4A2D0229E17CC000F6D7A /* BlueoothSpeaker.m */,
 			);
 			name = SmartRoom;
+			sourceTree = "<group>";
+		};
+		1428A008BD6AF249612C0C70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC52FBBDA139469BBE717436 /* Pods-SmartRoom.debug.xcconfig */,
+				27B4DC8137AEC31CB93F8719 /* Pods-SmartRoom.release.xcconfig */,
+				973EC841A343F112A2FAF5D4 /* Pods-SmartRoom-tvOS.debug.xcconfig */,
+				37472CF1C60F76D908661B33 /* Pods-SmartRoom-tvOS.release.xcconfig */,
+				3BBE17C53951556445FD3185 /* Pods-SmartRoom-tvOSTests.debug.xcconfig */,
+				26416CAB0A2E61921DA7727E /* Pods-SmartRoom-tvOSTests.release.xcconfig */,
+				215028D2DC2D057C84BD88D8 /* Pods-SmartRoomTests.debug.xcconfig */,
+				CC9B77DE07964899A7D6CD51 /* Pods-SmartRoomTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -548,6 +722,10 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				0DD0043E3CA1971E24A6E56C /* Pods_SmartRoom.framework */,
+				260B26FD25712B70D559B471 /* libPods-SmartRoom-tvOS.a */,
+				055E6BE0F63640E393EF77FB /* libPods-SmartRoom-tvOSTests.a */,
+				E6BC0DB6198BD727A0C640E7 /* Pods_SmartRoomTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -586,6 +764,13 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				F0F82D27565244AB91A963F9 /* RNGestureHandler.xcodeproj */,
+				7AA5BF588F7745368F16C186 /* BleClient.xcodeproj */,
+				47AF5145C35A408080267F83 /* RNiTunes.xcodeproj */,
+				FFCBCDBDA523409585B27C94 /* RNReactNativeGetMusicFiles.xcodeproj */,
+				098C0E20E7E647E58869969D /* RNAudio.xcodeproj */,
+				B52E8F5C648645FA9BE7F684 /* MusicControl.xcodeproj */,
+				4101C655286C44A6AE4B475E /* RNTrackPlayer.xcodeproj */,
+				294B91CB62694D5EA41B7114 /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -608,6 +793,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D189DCE82290B65600ADD5A8 /* Recovered References */,
+				CC7C783FC40B4F3EB224159E /* Resources */,
+				1428A008BD6AF249612C0C70 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -634,11 +821,84 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CC7C783FC40B4F3EB224159E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D2A2F2D133642588E869CE6 /* AntDesign.ttf */,
+				A60DADFA084440B1A5B2322C /* Entypo.ttf */,
+				E024F936495B47568ABE6B7E /* EvilIcons.ttf */,
+				1D4C1A7209D5423BB11883FD /* Feather.ttf */,
+				4A3A9B1DC3194273975AFB63 /* FontAwesome.ttf */,
+				211BB2C555EA4EF09A4F0F6C /* FontAwesome5_Brands.ttf */,
+				DFA20A4F4098431AB4B425BF /* FontAwesome5_Regular.ttf */,
+				03E2A0260B2B44F38BE9591A /* FontAwesome5_Solid.ttf */,
+				5778FE1C25254FFB882B6BFA /* Foundation.ttf */,
+				B4B712E5AC9542F085DEC6EC /* Ionicons.ttf */,
+				F9D8F98D688B4BD5AD034316 /* MaterialCommunityIcons.ttf */,
+				1F8B6954DE504C0A8078FA5F /* MaterialIcons.ttf */,
+				9A0209177E2D4AE9A6BCD520 /* Octicons.ttf */,
+				E0C47517B64A4E19BFADDE75 /* SimpleLineIcons.ttf */,
+				F42731E537464A3686277EAD /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D1364AAB22A329590047C386 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1364AB122A329590047C386 /* libRNTrackPlayer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1364AAD22A329590047C386 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1364AB522A329590047C386 /* libRNVectorIcons.a */,
+				D1364AB722A329590047C386 /* libRNVectorIcons-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1364AB822A3295A0047C386 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1364ABD22A3295A0047C386 /* libMusicControl.a */,
+				D1364ABF22A3295A0047C386 /* libMusicControl-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D153C8E0229C7DDB00FEA534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D153C8E4229C7DDB00FEA534 /* libRNiTunes.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1801DC2229B04AC008C33C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1801DC6229B04AC008C33C5 /* libBleClient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D189DCE82290B65600ADD5A8 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				A7385E4EC1FB48FBB48230FF /* libRNGestureHandler.a */,
 				79360D1C31F3444E9B14E0C0 /* libRNGestureHandler-tvOS.a */,
+				69F9C6CCBB7641EFA44469BB /* libBleClient.a */,
+				096908898DDC4EE7AC79D081 /* libRNiTunes.a */,
+				5EFA2690A067483EA2B64DBD /* libRNReactNativeGetMusicFiles.a */,
+				C6855CABC9DC4C7FA2D7D5A6 /* libRNAudio.a */,
+				BA04BCFC91D84D7C8DBF181D /* libMusicControl.a */,
+				A431B548CA9445A79ACC4DC2 /* libRNTrackPlayer.a */,
+				D54E55348E444DADA86E4A28 /* libRNVectorIcons.a */,
+				6674181EEDFC4FC38C71C877 /* libMusicControl-tvOS.a */,
+				DBE9930E12AB4CF5B4931746 /* libRNVectorIcons-tvOS.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -652,6 +912,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D1E4A24E229DFC22000F6D7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1E4A252229DFC22000F6D7A /* libRNReactNativeGetMusicFiles.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1E4A28D229E033D000F6D7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1E4A291229E033D000F6D7A /* libRNAudio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -659,6 +935,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SmartRoomTests" */;
 			buildPhases = (
+				D7896CA23636AC4D711D2DB8 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -677,10 +954,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SmartRoom" */;
 			buildPhases = (
+				D2B48D78E325FD0B4A63D3E8 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				81EF23721DD8FB65A4F546C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -695,6 +974,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SmartRoom-tvOS" */;
 			buildPhases = (
+				C1F68DF60664ADF1D7E4141D /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
@@ -713,6 +993,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SmartRoom-tvOSTests" */;
 			buildPhases = (
+				D91720D51C673A2A922CCCA5 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -738,7 +1019,12 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = Y4XKW822R6;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = Y4XKW822R6;
+						LastSwiftMigration = 1010;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -763,6 +1049,14 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = D1801DC2229B04AC008C33C5 /* Products */;
+					ProjectRef = 7AA5BF588F7745368F16C186 /* BleClient.xcodeproj */;
+				},
+				{
+					ProductGroup = D1364AB822A3295A0047C386 /* Products */;
+					ProjectRef = B52E8F5C648645FA9BE7F684 /* MusicControl.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -812,8 +1106,28 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = D1E4A28D229E033D000F6D7A /* Products */;
+					ProjectRef = 098C0E20E7E647E58869969D /* RNAudio.xcodeproj */;
+				},
+				{
 					ProductGroup = D189DD162290B65700ADD5A8 /* Products */;
 					ProjectRef = F0F82D27565244AB91A963F9 /* RNGestureHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = D153C8E0229C7DDB00FEA534 /* Products */;
+					ProjectRef = 47AF5145C35A408080267F83 /* RNiTunes.xcodeproj */;
+				},
+				{
+					ProductGroup = D1E4A24E229DFC22000F6D7A /* Products */;
+					ProjectRef = FFCBCDBDA523409585B27C94 /* RNReactNativeGetMusicFiles.xcodeproj */;
+				},
+				{
+					ProductGroup = D1364AAB22A329590047C386 /* Products */;
+					ProjectRef = 4101C655286C44A6AE4B475E /* RNTrackPlayer.xcodeproj */;
+				},
+				{
+					ProductGroup = D1364AAD22A329590047C386 /* Products */;
+					ProjectRef = 294B91CB62694D5EA41B7114 /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1058,6 +1372,55 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D1364AB122A329590047C386 /* libRNTrackPlayer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNTrackPlayer.a;
+			remoteRef = D1364AB022A329590047C386 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1364AB522A329590047C386 /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = D1364AB422A329590047C386 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1364AB722A329590047C386 /* libRNVectorIcons-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNVectorIcons-tvOS.a";
+			remoteRef = D1364AB622A329590047C386 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1364ABD22A3295A0047C386 /* libMusicControl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMusicControl.a;
+			remoteRef = D1364ABC22A3295A0047C386 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1364ABF22A3295A0047C386 /* libMusicControl-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMusicControl-tvOS.a";
+			remoteRef = D1364ABE22A3295A0047C386 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D153C8E4229C7DDB00FEA534 /* libRNiTunes.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNiTunes.a;
+			remoteRef = D153C8E3229C7DDB00FEA534 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1801DC6229B04AC008C33C5 /* libBleClient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBleClient.a;
+			remoteRef = D1801DC5229B04AC008C33C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D189DD0F2290B65700ADD5A8 /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1100,6 +1463,20 @@
 			remoteRef = D189DD1C2290B65700ADD5A8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D1E4A252229DFC22000F6D7A /* libRNReactNativeGetMusicFiles.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNReactNativeGetMusicFiles.a;
+			remoteRef = D1E4A251229DFC22000F6D7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1E4A291229E033D000F6D7A /* libRNAudio.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNAudio.a;
+			remoteRef = D1E4A290229E033D000F6D7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1116,6 +1493,21 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				D91C71385E804FD49650E849 /* AntDesign.ttf in Resources */,
+				20E1F73CF2CC473DABCC7D22 /* Entypo.ttf in Resources */,
+				42ED95F4A5144585A7A9B73A /* EvilIcons.ttf in Resources */,
+				8022DAEA6EC0445FB6313652 /* Feather.ttf in Resources */,
+				5A4AE6D779FB4F05B980B342 /* FontAwesome.ttf in Resources */,
+				A5B3675909284DD193607E29 /* FontAwesome5_Brands.ttf in Resources */,
+				104B99F8A3D342818F73B715 /* FontAwesome5_Regular.ttf in Resources */,
+				3455C9D5452F4D749EA72AAB /* FontAwesome5_Solid.ttf in Resources */,
+				BD7EF810A99E485584B6CBB2 /* Foundation.ttf in Resources */,
+				3D344221B5884E738FE8B47C /* Ionicons.ttf in Resources */,
+				3CEAEFDEC672402091E2D68C /* MaterialCommunityIcons.ttf in Resources */,
+				A93B6EC0AA1447378E4E2B29 /* MaterialIcons.ttf in Resources */,
+				0AD603571D2E423DAB764005 /* Octicons.ttf in Resources */,
+				186D23A7EFFD4ECDAA0EF3F1 /* SimpleLineIcons.ttf in Resources */,
+				525B2D2B37F049748C7B6FB8 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1165,6 +1557,116 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		81EF23721DD8FB65A4F546C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F68DF60664ADF1D7E4141D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartRoom-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B48D78E325FD0B4A63D3E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartRoom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7896CA23636AC4D711D2DB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartRoomTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D91720D51C673A2A922CCCA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartRoom-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1181,6 +1683,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				D1801E05229B0AA1008C33C5 /* addingSwift.swift in Sources */,
+				D1E4A2D1229E17CC000F6D7A /* BlueoothSpeaker.m in Sources */,
+				D1E4A2A4229E1791000F6D7A /* BluetoothSpeaker.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1232,8 +1737,11 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215028D2DC2D057C84BD88D8 /* Pods-SmartRoomTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y4XKW822R6;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1241,12 +1749,28 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = SmartRoomTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1262,18 +1786,37 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC9B77DE07964899A7D6CD51 /* Pods-SmartRoomTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = SmartRoomTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1289,13 +1832,23 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC52FBBDA139469BBE717436 /* Pods-SmartRoom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = SmartRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1306,18 +1859,31 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SmartRoom;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartRoom-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B4DC8137AEC31CB93F8719 /* Pods-SmartRoom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y4XKW822R6;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = SmartRoom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1328,12 +1894,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SmartRoom;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartRoom-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973EC841A343F112A2FAF5D4 /* Pods-SmartRoom-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1347,11 +1916,27 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = "SmartRoom-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1369,6 +1954,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37472CF1C60F76D908661B33 /* Pods-SmartRoom-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1382,11 +1968,27 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = "SmartRoom-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1404,6 +2006,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BBE17C53951556445FD3185 /* Pods-SmartRoom-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1416,11 +2019,27 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = "SmartRoom-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1438,6 +2057,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26416CAB0A2E61921DA7727E /* Pods-SmartRoom-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1450,11 +2070,27 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-ble-plx/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-itunes/RNiTunes",
+					"$(SRCROOT)/../node_modules/react-native-get-music-files/ios",
+					"$(SRCROOT)/../node_modules/react-native-audio-player-recorder/ios",
+					"$(SRCROOT)/../node_modules/react-native-music-control/ios",
+					"$(SRCROOT)/../node_modules/react-native-track-player/ios/RNTrackPlayer/**",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 				);
 				INFOPLIST_FILE = "SmartRoom-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1516,7 +2152,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1562,7 +2198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

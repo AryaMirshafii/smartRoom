@@ -45,7 +45,7 @@ public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGa
             logger.error("Error in retrieving product: " + ex);
 
             // send the error response back
-            Response responseBody = new Response("Error in retrieving User: ", input);
+            Response responseBody = new Response("Error in retrieving User: " + ex.toString(), input);
             return ApiGatewayResponse.builder()
                     .setStatusCode(500)
                     .setObjectBody(responseBody)

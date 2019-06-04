@@ -35,7 +35,7 @@ export default class Login extends Component {
     constructor(props) {
 
         super(props);
-        this.postUrl = 'https://sgje19f2bj.execute-api.us-east-1.amazonaws.com/dev/users';
+        this.postUrl = 'https://o45okrguj2.execute-api.us-east-1.amazonaws.com/dev/users';
         this.state = {
             firstName:'',
             lastName:'',

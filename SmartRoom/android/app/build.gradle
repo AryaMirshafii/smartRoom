@@ -138,6 +138,12 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-track-player')
+    implementation project(':react-native-music-control')
+    implementation project(':react-native-audio-player-recorder')
+    implementation project(':react-native-get-music-files')
+    implementation project(':react-native-ble-plx')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

@@ -33,8 +33,9 @@ export default class Register extends Component {
     }
     constructor(props) {
         super(props);
-        this.postUrl = 'https://sgje19f2bj.execute-api.us-east-1.amazonaws.com/dev/users';
+        this.postUrl = 'https://o45okrguj2.execute-api.us-east-1.amazonaws.com/dev/users';
         this.state = {
+            id: '',
             firstName   : '',
             lastName: '',
             email:'',
@@ -94,7 +95,12 @@ export default class Register extends Component {
                     }),
                 }).then((response) => response.json())
                     .then((responseJson) => {
-                        return responseJson.movies;
+                        //return responseJson.movies;
+                        console.log("RESPONSEJSON IS" + responseJson["id"])
+                        this.setState({id :responseJson["id"]})
+                        this._storeData().then((dummy) => {
+
+                        });
                     })
                     .catch((error) => {
                         console.error(error);
@@ -120,6 +126,7 @@ export default class Register extends Component {
 
     _storeData = async () => {
         try {
+            await AsyncStorage.setItem('id', this.state.id);
             await AsyncStorage.setItem('firstName', this.state.firstName);
             await AsyncStorage.setItem('lastName', this.state.lastName);
             await AsyncStorage.setItem('email', this.state.email);
@@ -138,7 +145,7 @@ export default class Register extends Component {
 
         return (
             <View style={styles.container}>
-                <View style={styles.inputContainer}>
+                <View style={styles.topInputContainer}>
                     <TextInput style={styles.inputs}
                                placeholder="First Name"
                                autoCapitalize = 'none'
@@ -209,6 +216,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000',
     },
     inputContainer: {
+
+        borderBottomColor: '#F5FCFF',
+        backgroundColor: '#FFFFFF',
+        borderRadius:30,
+        borderBottomWidth: 1,
+        width:250,
+        height:45,
+        marginBottom:20,
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+    topInputContainer: {
+        marginTop:-40,
         borderBottomColor: '#F5FCFF',
         backgroundColor: '#FFFFFF',
         borderRadius:30,
