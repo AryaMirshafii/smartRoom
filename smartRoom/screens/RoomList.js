@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,WebView,Dimensions,FlatList, TouchableOpacity, ScrollView,Alert} from 'react-native';
+import {Platform, StyleSheet, Text, AsyncStorage, View,WebView,Dimensions,FlatList, TouchableOpacity, ScrollView,Alert} from 'react-native';
 
 import {ListItem} from "react-native-elements";import Room from './Room'
 
@@ -52,8 +52,11 @@ export default class RoomList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.userUrl = 'https://o45okrguj2.execute-api.us-east-1.amazonaws.com/dev/users';
+        this.userUrl = 'https://67nypadvwj.execute-api.us-east-1.amazonaws.com/dev/users';
         this.hasRooms = false;
+
+
+
     }
 
     getData = async () => {
@@ -69,17 +72,15 @@ export default class RoomList extends React.Component {
 
     componentDidMount = () => {
         this.getData().then(() =>{
-            this.userUrl = this.userUrl + this.userId
-            var {navigate} = this.props.navigation;
-            fetch(this.userUrl, {
-                method: 'GET'
-            })
-                .then((response) => response.json())
-                .then((responseJson) => {
-                    console.log(responseJson);
+                console.log("HIIIII");
+                this.userUrl = this.userUrl +'/' +  this.userId;
+                var {navigate} = this.props.navigation;
+                fetch(this.userUrl)
+                    .then((response) => response.json())
+                    .then((responseJson) => {
+                        //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
 
-                    for(var i = 0; i < responseJson.length; i++){
-                        let roomIds = responseJson[i]["roomIds"];
+                        let roomIds = responseJson["roomIds"];
                         console.log("Room ids for this user are: " + roomIds);
 
 
@@ -90,17 +91,16 @@ export default class RoomList extends React.Component {
                         }else{
                             this.hasRooms = true;
                         }
-                    }
 
 
 
 
 
 
-                })
-                .catch((error) => {
-                    console.error(error);
-                })
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    })
             }
 
         )
@@ -111,6 +111,43 @@ export default class RoomList extends React.Component {
 
 
     render() {
+
+        this.getData().then(() =>{
+                console.log("HIIIII");
+                this.userUrl = this.userUrl +'/' +  this.userId;
+                var {navigate} = this.props.navigation;
+                fetch(this.userUrl)
+                    .then((response) => response.json())
+                    .then((responseJson) => {
+                        //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
+
+                        let roomIds = responseJson["roomIds"];
+                        console.log("Room ids for this user are: " + roomIds);
+
+
+
+                        if(roomIds ===   "\[\"\"]" ) {
+                            console.log("Room ids for this user are: room ids are empty");
+
+                        }else{
+                            this.hasRooms = true;
+                        }
+
+
+
+
+
+
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    })
+            }
+
+        )
+
+
+
         //this.props.navigation
         var {navigate} = this.props.navigation;
         const dummyRoom1 = new Room("Bedroom", 0);

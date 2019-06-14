@@ -8,18 +8,9 @@ import com.serverless.dal.User;
 import com.serverless.dal.User;
 import org.apache.log4j.Logger;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.logging.Handler;
 
-
-
-
-
-
-
-
-        
 
 public class ListUsersHandler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
 
@@ -29,12 +20,14 @@ public class ListUsersHandler implements RequestHandler<Map<String, Object>, Api
     public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
         try {
             // get all products
-            List<User> products = new User().list();
+            List<User> users = new User().list();
 
             // send the response back
+
+
             return ApiGatewayResponse.builder()
                     .setStatusCode(200)
-                    .setObjectBody(products)
+                    .setObjectBody(users)
                     .setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
                     .build();
         } catch (Exception ex) {
@@ -49,5 +42,9 @@ public class ListUsersHandler implements RequestHandler<Map<String, Object>, Api
                     .build();
         }
     }
+
+
+
+
 }
 

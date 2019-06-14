@@ -11,6 +11,8 @@ import com.serverless.dal.User;
 import org.apache.log4j.Logger;
 import java.util.Collections;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGatewayResponse> {
 
@@ -25,13 +27,17 @@ public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGa
             String UserID = pathParameters.get("id");
 
             // get the Product by id
-            User User = new User().get(UserID);
+            User user = new User().get(UserID);
+            if(user != null){
+                user.update();
+            }
 
+            //updateUsers(user);
             // send the response back
-            if (User != null) {
+            if (user != null) {
                 return ApiGatewayResponse.builder()
                         .setStatusCode(200)
-                        .setObjectBody(User)
+                        .setObjectBody(user)
                         .setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
                         .build();
             } else {
@@ -52,6 +58,24 @@ public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGa
                     .setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
                     .build();
         }
+    }
+
+
+    private void updateUsers(User user){
+        new Timer().schedule(new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+
+                try{
+                    user.update();
+                }catch(Exception e){
+                    logger.trace("Exception happened" + e.toString());
+                }
+
+            }
+        }, 1000 );
     }
 }
 

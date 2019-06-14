@@ -32,9 +32,7 @@ public class GetRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
         // send the response back
         if (room != null) {
 
-            room.setName(room.getName().replace("\"", ""));
-            room.setSongPlaying(room.getSongPlaying().replace("\"", ""));
-            room.setParentUser(room.getParentUser().replace("\"", ""));
+
           return ApiGatewayResponse.builder()
       				.setStatusCode(200)
       				.setObjectBody(room)
@@ -51,7 +49,7 @@ public class GetRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
         logger.error("Error in retrieving product: " + ex);
 
         // send the error response back
-  			Response responseBody = new Response("Error in retrieving room: ", input);
+  			Response responseBody = new Response("Error in retrieving room:  " + ex, input);
   			return ApiGatewayResponse.builder()
   					.setStatusCode(500)
   					.setObjectBody(responseBody)
