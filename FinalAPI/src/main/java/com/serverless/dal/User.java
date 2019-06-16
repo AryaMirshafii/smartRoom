@@ -128,6 +128,11 @@ public class User {
         this.roomIds = roomIdList.toString();
     }
 
+    public void addToRoomList(List<String> roomIds){
+        this.roomIdList.addAll(roomIds);
+        this.roomIds = roomIdList.toString();
+    }
+
 
 
     public User(){
@@ -225,20 +230,5 @@ public class User {
         return true;
     }
 
-    public void update()throws IOException {
-        DynamoDBScanExpression scanExp = new DynamoDBScanExpression();
-        List<User> results = this.mapper.scan(User.class, scanExp);
-        for (User user : results) {
-            List<Room> roomResults = this.roomMapper.scan(Room.class, scanExp);
 
-            for(Room room: roomResults){
-                if(room.getParentUser().equals(user.id)){
-                    user.addToRoomList(room.getId());
-                    user.save(user);
-                }
-            }
-
-        }
-
-    }
 }

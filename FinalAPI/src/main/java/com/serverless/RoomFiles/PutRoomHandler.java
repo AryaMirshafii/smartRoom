@@ -46,6 +46,7 @@ public class PutRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
 
 
 
+
                 return ApiGatewayResponse.builder()
                         .setStatusCode(200)
                         .setObjectBody(room)

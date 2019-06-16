@@ -28,13 +28,12 @@ public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGa
 
             // get the Product by id
             User user = new User().get(UserID);
-            if(user != null){
-                user.update();
-            }
+
 
             //updateUsers(user);
             // send the response back
             if (user != null) {
+
                 return ApiGatewayResponse.builder()
                         .setStatusCode(200)
                         .setObjectBody(user)
@@ -61,21 +60,6 @@ public class GetUserHandler implements RequestHandler<Map<String, Object>, ApiGa
     }
 
 
-    private void updateUsers(User user){
-        new Timer().schedule(new TimerTask()
-        {
-            @Override
-            public void run()
-            {
 
-                try{
-                    user.update();
-                }catch(Exception e){
-                    logger.trace("Exception happened" + e.toString());
-                }
-
-            }
-        }, 1000 );
-    }
 }
 

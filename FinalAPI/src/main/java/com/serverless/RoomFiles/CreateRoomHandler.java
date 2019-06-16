@@ -8,7 +8,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serverless.ApiGatewayResponse;
 import com.serverless.Response;
 import com.serverless.dal.Room;
+import com.serverless.dal.User;
 import org.apache.log4j.Logger;
+
+import java.net.UnknownServiceException;
 import java.util.Collections;
 import java.util.Map;
 
@@ -46,7 +49,21 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 		  room.setSongPlaying(body.get("songPlaying").asText());
 		  room.setParentUser(body.get("parentUser").asText());
 		  room.setName(body.get("name").asText());
+
+
 		  room.save(room);
+
+
+		  room.updateUsers();
+
+
+
+
+
+
+
+
+
 
 		  /**
 

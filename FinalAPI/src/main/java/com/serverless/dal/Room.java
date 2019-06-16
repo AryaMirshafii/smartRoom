@@ -7,6 +7,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig.Table
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,12 +20,14 @@ public class Room {
 
 
     // get the table name from env. var. set in serverless.yml
-    private static final String PRODUCTS_TABLE_NAME = System.getenv("ROOMS_TABLE_NAME");
+    private static final String ROOMS_TABLE_NAME = System.getenv("ROOMS_TABLE_NAME");
+    private static final String USERS_TABLE_NAME = System.getenv("USERS_TABLE_NAME");
 
     private static DynamoDBAdapter db_adapter;
     private final AmazonDynamoDB client;
     private final DynamoDBMapper mapper;
-
+    private final DynamoDBMapper userMapper;
+    private HashMap<String, List<String>> userRoomMap = new HashMap<>();
     private Logger logger = Logger.getLogger(this.getClass());
 
 
@@ -137,13 +140,27 @@ public class Room {
     public Room() {
         // build the mapper config
         DynamoDBMapperConfig mapperConfig = DynamoDBMapperConfig.builder()
-                .withTableNameOverride(new DynamoDBMapperConfig.TableNameOverride(PRODUCTS_TABLE_NAME))
+                .withTableNameOverride(new DynamoDBMapperConfig.TableNameOverride(ROOMS_TABLE_NAME))
                 .build();
         // get the db adapter
         this.db_adapter = DynamoDBAdapter.getInstance();
         this.client = this.db_adapter.getDbClient();
         // create the mapper with config
         this.mapper = this.db_adapter.createDbMapper(mapperConfig);
+
+
+
+
+
+
+
+        DynamoDBMapperConfig userConfig = DynamoDBMapperConfig.builder()
+                .withTableNameOverride(new DynamoDBMapperConfig.TableNameOverride(USERS_TABLE_NAME))
+                .build();
+        // get the db adapter
+        this.db_adapter = DynamoDBAdapter.getInstance();
+        // create the mapper with config
+        this.userMapper = this.db_adapter.createDbMapper(userConfig);
     }
 
     public String toString() {
@@ -154,7 +171,7 @@ public class Room {
 
     // methods
     public Boolean ifTableExists() {
-        return this.client.describeTable(PRODUCTS_TABLE_NAME).getTable().getTableStatus().equals("ACTIVE");
+        return this.client.describeTable(ROOMS_TABLE_NAME).getTable().getTableStatus().equals("ACTIVE");
     }
 
     public List<Room> list() throws IOException {
@@ -207,4 +224,52 @@ public class Room {
         }
         return true;
     }
+
+
+
+    public void updateUsers()throws IOException {
+        DynamoDBScanExpression scanExp = new DynamoDBScanExpression();
+        List<User> results = this.userMapper.scan(User.class, scanExp);
+        List<Room> roomResults = this.mapper.scan(Room.class, scanExp);
+        for (User user : results) {
+
+
+            /*
+
+            if(this.parentUser.equals(user.getId())){
+                List<String> listToadd = new ArrayList<>();
+                if(this.userRoomMap.containsKey(this.parentUser)){
+                    listToadd  = this.userRoomMap.get(this.parentUser);
+                    listToadd.add(this.id);
+                    //this.userRoomMap.get(this.parentUser).add(this.id);
+                }else{
+
+                    listToadd.add(this.id);
+
+                }
+                this.userRoomMap.put(this.parentUser, listToadd);
+                user.addToRoomList(this.userRoomMap.get(this.parentUser));
+                user.save(user);
+
+            */
+
+
+
+
+
+            for(Room room: roomResults){
+                if(room.getParentUser().equals(user.getId())){
+                    user.addToRoomList(room.getId());
+                    user.save(user);
+                }
+            }
+        }
+
+
+
+
+
+    }
+
 }
+
