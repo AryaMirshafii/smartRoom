@@ -52,8 +52,6 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 
 
 		  room.save(room);
-
-
 		  room.updateUsers();
 
 

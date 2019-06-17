@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+let Configs = require('../config.js');
+
 import UserManager from './UserManager'
 import {
     StyleSheet,
@@ -35,7 +37,7 @@ export default class Login extends Component {
     constructor(props) {
 
         super(props);
-        this.postUrl = 'https://67nypadvwj.execute-api.us-east-1.amazonaws.com/dev/users';
+        //this.postUrl = 'https://j9mr11cl24.execute-api.us-east-1.amazonaws.com/dev/users';
         this.state = {
             firstName:'',
             lastName:'',
@@ -50,7 +52,7 @@ export default class Login extends Component {
     }
 
     componentDidMount = () => {
-        fetch(this.postUrl, {
+        fetch(Configs.default.USER_URL, {
             method: 'GET'
         })
             .then((response) => response.json())

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+let Configs = require('../config.js');
 import {Platform, StyleSheet, Text, AsyncStorage, View,WebView,Dimensions,FlatList, TouchableOpacity, ScrollView,Alert} from 'react-native';
 
 import {ListItem} from "react-native-elements";import Room from './Room'
@@ -23,14 +24,15 @@ const roomData = [{
 
 }
 ];*/
+var keyIndex = 0;
 const roomData = [
     {
 
     name: 'Add Room',
-    key:0
+    key:keyIndex
 
     },
-]
+];
 
 
 export default class RoomList extends React.Component {
@@ -52,10 +54,21 @@ export default class RoomList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.userUrl = 'https://67nypadvwj.execute-api.us-east-1.amazonaws.com/dev/users';
         this.hasRooms = false;
 
+        this.state = {
+            roomName   : '',
 
+            userId: '',
+            userFirstName   : '',
+            userLastName: '',
+            userEmail:'',
+            userPassword:'',
+            userRoomIds:[],
+
+        }
+        this.getRooms();
+        //this.loadRooms();
 
     }
 
@@ -70,21 +83,43 @@ export default class RoomList extends React.Component {
 
 
 
-    componentDidMount = () => {
+    _storeData = async (roomId, roomName) => {
+        if(roomId && roomName){
+            try {
+                await AsyncStorage.setItem(roomId, roomName);
+
+
+
+
+            } catch (error) {
+                // Error saving data
+            }
+        }else{
+            console.log("The provided roomId or roomName is null");
+        }
+
+    };
+
+
+    getRooms(){
         this.getData().then(() =>{
-                console.log("HIIIII");
-                this.userUrl = this.userUrl +'/' +  this.userId;
+
+
                 var {navigate} = this.props.navigation;
-                fetch(this.userUrl)
+                fetch(Configs.default.USER_URL +'/' +  this.userId)
                     .then((response) => response.json())
                     .then((responseJson) => {
                         //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
 
-                        let roomIds = responseJson["roomIds"];
+                        var roomIds = ''  + responseJson["roomIds"];
+                        roomIds = roomIds.replace('[', '');
+                        roomIds = roomIds.replace(']', '');
+                        roomIds = roomIds.replace(' ', '');
                         console.log("Room ids for this user are: " + roomIds);
+                        this.setState({userRoomIds :roomIds.split(",")})
+                        console.log("USer has " + this.state.userRoomIds.length + "rooms");
 
-
-
+                        this.loadRooms();
                         if(roomIds ===   "\[\"\"]" ) {
                             console.log("Room ids for this user are: room ids are empty");
 
@@ -104,47 +139,57 @@ export default class RoomList extends React.Component {
             }
 
         )
-
     }
+
+
+    loadRooms(){
+        for(var i = 0; i < this.state.userRoomIds.length; i++){
+            console.log("looking at:" + this.state.userRoomIds[i]);
+
+
+
+
+
+            fetch(Configs.default.ROOM_URL + '/' + this.state.userRoomIds[i])
+                .then((response) => response.json())
+                .then((responseJson) => {
+                    //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
+
+                    var roomName = ''  + responseJson["name"];
+
+                    console.log("Room name is: " + roomName);
+                    this._storeData(this.state.userRoomIds[i],roomName ).then();
+
+
+                    roomData.push({
+                        name: roomName,
+                        key: ++keyIndex
+                    })
+
+
+
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+
+
+        }
+    }
+
+
+
+
+
+
+
 
 
 
 
     render() {
 
-        this.getData().then(() =>{
-                console.log("HIIIII");
-                this.userUrl = this.userUrl +'/' +  this.userId;
-                var {navigate} = this.props.navigation;
-                fetch(this.userUrl)
-                    .then((response) => response.json())
-                    .then((responseJson) => {
-                        //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
 
-                        let roomIds = responseJson["roomIds"];
-                        console.log("Room ids for this user are: " + roomIds);
-
-
-
-                        if(roomIds ===   "\[\"\"]" ) {
-                            console.log("Room ids for this user are: room ids are empty");
-
-                        }else{
-                            this.hasRooms = true;
-                        }
-
-
-
-
-
-
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    })
-            }
-
-        )
 
 
 

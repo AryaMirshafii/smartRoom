@@ -9,6 +9,8 @@ target 'SmartRoom' do
 pod 'Alamofire'
 
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'SmartRoomTests' do
     inherit! :search_paths
     # Pods for testing

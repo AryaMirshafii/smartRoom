@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+let Configs = require('../config.js');
 import {
     StyleSheet,
     Text,
@@ -36,8 +37,8 @@ export default class AddRoomScreen extends Component {
     constructor(props) {
         super(props);
         this.roomSaver = new RoomSaver();
-        this.postUrl = 'https://67nypadvwj.execute-api.us-east-1.amazonaws.com/dev/rooms';
-        this.userUrl = 'https://67nypadvwj.execute-api.us-east-1.amazonaws.com/dev/users';
+        this.postUrl = 'https://j9mr11cl24.execute-api.us-east-1.amazonaws.com/dev/rooms';
+        this.userUrl = 'https://j9mr11cl24.execute-api.us-east-1.amazonaws.com/dev/users';
         this.userRoomIds = [];
         this.state = {
             roomName   : '',
@@ -50,10 +51,7 @@ export default class AddRoomScreen extends Component {
             userRoomIds:[],
 
         }
-        this._retrieveData().then(()=>{
-
-            }
-        )
+        this._retrieveData().then();
 
 
     }
@@ -97,111 +95,32 @@ export default class AddRoomScreen extends Component {
 
         var {navigate} = this.props.navigation;
         console.log("Begining of saving");
-        fetch(this.userUrl+'/' + this.state.userId)
-            .then((response) => response.json())
+
+
+        fetch(Configs.default.ROOM_URL, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+
+
+
+            body: JSON.stringify({
+                name: this.state.roomName,
+                temperature: 0,
+                visitorStatus: 0,
+                lightsOn: 0,
+                latitude: 0,
+                longitude: 0,
+                songPlaying: '',
+                parentUser:this.state.userId,
+
+            }),
+        }).then((response) => response.json())
             .then((responseJson) => {
-                var roomIdValues = [];
-                var roomids = responseJson.roomIds.replace("[", "");
-                roomids =roomids.replace("]", "");
-                if(responseJson.roomIds.length > 50){
-                    var roomIdArray = roomids.split(',');
-                    for(let roomid in roomIdArray){
-                        if(!roomid || roomid.length <40){
-                            continue;
-                        }else{
-                            roomid =roomid.replace("\"", "");
-                            roomid =roomid.replace(/["']/g, "")
-                            roomIdValues.push(roomid);
-                            this.roomSaver.saveRoom(roomid);
-                        }
-                    }
-                }else{
-                    roomids =roomids.replace("\"", "");
-                    roomids =roomids.replace(/["']/g, "")
-                    roomIdValues.push(roomids);
-                    this.roomSaver.saveRoom(roomids);
-                }
-
-
-                fetch(this.postUrl, {
-                    method: 'POST',
-                    headers: {
-                        Accept: 'application/json',
-                        'Content-Type': 'application/json',
-                    },
-
-
-
-                    body: JSON.stringify({
-                        name: this.state.roomName,
-                        temperature: 0,
-                        visitorStatus: 0,
-                        lightsOn: 0,
-                        latitude: 0,
-                        longitude: 0,
-                        songPlaying: '',
-                        parentUser:this.state.userId,
-
-                    }),
-                }).then((response) => response.json())
-                    .then((responseJson) => {
-
-
-                        console.log("Pre array length" + roomIdValues.length);
-                        this.roomSaver.saveRoom(responseJson["id"]);
-                        //roomIdValues.push(responseJson["id"]);
-                        this.setState({userRoomIds: roomIdValues});
-                        this.userUrl = this.userUrl + '/' + this.state.userId;
-
-
-                        fetch(this.userUrl , {
-                            method: 'PUT',
-                            headers: {
-                                Accept: 'application/json',
-
-                            },
-
-
-
-                            body: JSON.stringify({
-                                firstName: this.state.userFirstName,
-                                lastName: this.state.userLastName,
-                                email: this.state.userEmail,
-                                password: this.state.userPassword,
-                                roomIds: this.roomSaver.getRoomIds(),
-                            }),
-                        }).then((response) => response.json())
-                            .then((responseJson) => {
-                                //return responseJson.movies;
-                                console.log("Updated user!" + responseJson.toString().password);
-
-
-                            })
-                            .catch((error) => {
-                                console.error(error);
-                            });
-
-
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-                console.log("POSTED ROOM................")
-
-
-
 
             })
-            .catch((error) => {
-                console.error(error);
-            });
-
-
-
-
-
-
-
 
         Alert.alert(
             'Room Saved',
@@ -215,13 +134,31 @@ export default class AddRoomScreen extends Component {
 
 
 
+    }
+
+
+    getRooms() {
+
+        //Get user room ids array,
+        //iterate through and do n number of get requests
+        console.log("POST URL IS  + " + this.userUrl +'/' + this.state.userId);
+        return fetch(this.userUrl +'/' + this.state.userId)
+            .then((response) => response.json())
+            .then((responseJson) => {
+
+                let roomIds = responseJson.roomIds;
 
 
 
+                roomIds = roomIds.replace('[', '');
+                roomIds = roomIds.replace(']', '');
+                console.log("YOUR ROOMS ARE" + roomIds);
 
-
-
-
+                return responseJson.roomIds;
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
 
