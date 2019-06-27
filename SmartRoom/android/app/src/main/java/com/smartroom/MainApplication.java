@@ -3,6 +3,8 @@ package com.smartroom;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.brentvatne.react.ReactVideoPackage;
+import org.wonday.orientation.OrientationPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.guichaguri.trackplayer.TrackPlayer;
@@ -31,6 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactVideoPackage(),
+            new OrientationPackage(),
             new ReactNativeConfigPackage(),
             new VectorIconsPackage(),
             new TrackPlayer(),

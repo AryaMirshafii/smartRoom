@@ -32,6 +32,7 @@ import RoomList from "./screens/RoomList"
 
 import AddRoomScreen from "./screens/AddRoomScreen"
 
+import CameraStreamView from "./screens/CameraStreamView"
 
 
 var Navigation = createStackNavigator(
@@ -41,12 +42,12 @@ var Navigation = createStackNavigator(
   Third: {screen: RoomList},
   Fourth: {screen: RoomView},
   Fifth: {screen: MusicListView},
-      AddRoom:{screen: AddRoomScreen}
+      AddRoom:{screen: AddRoomScreen},
+      CameraView:{screen: CameraStreamView},
+
 
 });
-iTunes.getTracks().then((tracks) => {
 
-});
 
 
 

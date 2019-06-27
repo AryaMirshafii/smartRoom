@@ -16,10 +16,6 @@ import {
 } from 'react-native';
 import { BleManager } from 'react-native-ble-plx';
 import iTunes from 'react-native-itunes';
-import MusicList from '../MusicList'
-
-import MusicFiles from 'react-native-get-music-files';
-import AudioPlayer from 'react-native-audio-player-recorder';
 
 
 export default class MusicListView extends React.Component {
@@ -50,7 +46,7 @@ export default class MusicListView extends React.Component {
         let btStatus = NativeModules.BluetoothSpeaker.Connect();
         console.log("BT STATUS IS:::::::::" + btStatus)
 
-        AudioPlayer.AudioPlayer.get
+
 
 
 

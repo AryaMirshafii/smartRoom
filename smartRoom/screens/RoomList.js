@@ -178,7 +178,19 @@ export default class RoomList extends React.Component {
     }
 
 
+    NavigateToScreen(roomItem){
+        var {navigate} = this.props.navigation;
+        if(roomItem.name === 'Add Room' && roomItem.key === 0){
+            navigate("AddRoom", {
+                roomName: roomItem.name,
+            })
+        }else{
+            navigate("Fourth", {
+                roomName: roomItem.name,
+            })
+        }
 
+    }
 
 
 
@@ -189,58 +201,18 @@ export default class RoomList extends React.Component {
 
     render() {
 
-
-
-
-
-        //this.props.navigation
-        var {navigate} = this.props.navigation;
-        const dummyRoom1 = new Room("Bedroom", 0);
-        const dummyRoom2 = new Room("Kitchen", 1);
-
-        if(this.hasRooms){
-            return (
-                <FlatList
-                    style = {styles.mainView}
-                    data={roomData}
-                    renderItem={({item}) =>
-
-                        <TouchableOpacity style={styles.roomListItem} onPress={
-                            ()=>navigate("Fourth", {
-                                roomName: item.name,
-                            })
-
-                        }>
-                            <Text style = {styles.roomListText}>{item.roomName}</Text>
-                        </TouchableOpacity>
-
-
-
-
-                    }
-                    keyExtractor={(item, index) => index.toString()}
-
-
-                />
-            );
-        }
-
         return (
             <FlatList
                 style = {styles.mainView}
                 data={roomData}
                 renderItem={({item}) =>
 
-                    <TouchableOpacity style={styles.roomListItem}onPress={
-                        ()=>navigate("AddRoom", {
-
-                        })
+                    <TouchableOpacity style={styles.roomListItem} onPress={
+                        ()=>this.NavigateToScreen(item)
 
                     }>
                         <Text style = {styles.roomListText}>{item.name}</Text>
                     </TouchableOpacity>
-
-
 
 
                 }
@@ -249,9 +221,8 @@ export default class RoomList extends React.Component {
 
             />
         );
-
-
     }
+
 }
 
 

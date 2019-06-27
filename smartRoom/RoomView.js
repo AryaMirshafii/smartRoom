@@ -11,6 +11,7 @@ const instructions = Platform.select({
 });
 const outerCircleDim = 250;
 const innerCircleDim = 240;
+const circleMargin =  Math.abs(outerCircleDim - innerCircleDim)
 const edgeMargin = 20;
 const squareSide = (Dimensions.get('window').width)/2 - 40;
 type Props = {};
@@ -66,9 +67,17 @@ export default class RoomView extends React.Component {
                     <View style={styles.container}>
 
                         <View style={styles.outerCircle}>
-                            <View style={styles.innerCircle}>
+                            <TouchableOpacity style={styles.innerCircle}onPress={
+                                ()=>navigate("CameraView", {})
 
-                            </View>
+
+
+                            }>
+
+
+
+                                </TouchableOpacity>
+
                         </View>
                     </View>
                     <Text style={styles.tempF}>
@@ -177,7 +186,7 @@ const styles = StyleSheet.create({
     outerCircle: {
         marginTop:20,
         width: outerCircleDim,
-        height: outerCircleDim,
+        height: outerCircleDim ,
         borderRadius: outerCircleDim/2,
         justifyContent: 'center',
         alignItems: 'center',
@@ -185,10 +194,13 @@ const styles = StyleSheet.create({
 
     },
     innerCircle: {
+
         width: innerCircleDim,
         height: innerCircleDim,
         borderRadius: innerCircleDim/2,
-        backgroundColor: '#000000'
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#000000',
     },
     instructions: {
         fontSize: 50,

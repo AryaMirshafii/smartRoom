@@ -61,9 +61,9 @@ export default class Room extends React.Component {
                     <View style={styles.container}>
 
                         <View style={styles.outerCircle}>
-                            <View style={styles.innerCircle}>
-
-                            </View>
+                            <WebView style={styles.innerCircle}>
+                                source={{uri: 'https://github.com/facebook/react-native'}}
+                            </WebView>
                         </View>
                     </View>
                     <Text style={styles.tempF}>
