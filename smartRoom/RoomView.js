@@ -1,5 +1,16 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View,WebView,Dimensions, TouchableOpacity, ScrollView,Alert} from 'react-native';
+import {
+    Platform,
+    StyleSheet,
+    Text,
+    View,
+    WebView,
+    Dimensions,
+    TouchableOpacity,
+    ScrollView,
+    Alert,
+    Image
+} from 'react-native';
 
 
 
@@ -69,13 +80,11 @@ export default class RoomView extends React.Component {
                         <View style={styles.outerCircle}>
                             <TouchableOpacity style={styles.innerCircle}onPress={
                                 ()=>navigate("CameraView", {})
-
-
-
                             }>
-
-
-
+                                <Image
+                                    style = {styles.cameraButton}
+                                    source={require('./cameraIcon.png')}
+                                />
                                 </TouchableOpacity>
 
                         </View>
@@ -139,7 +148,6 @@ export default class RoomView extends React.Component {
                             </TouchableOpacity>
 
 
-
                             <TouchableOpacity style={buttonStyles.rightButton}>
                                 <Text style={buttonStyles.buttonText}>
                                     Party
@@ -172,14 +180,10 @@ export default class RoomView extends React.Component {
 const styles = StyleSheet.create({
 
     mainView: {
-
-
         backgroundColor: '#000000',
     },
     container: {
-
         flex: 1,
-
         alignItems: 'center',
         backgroundColor: '#000000',
     },
@@ -280,7 +284,6 @@ const buttonStyles = StyleSheet.create({
         marginTop:20,
         marginRight:20,
         backgroundColor: '#3D4144',
-
         width: squareSide,
         height: squareSide,
         borderRadius: 15,
@@ -291,7 +294,6 @@ const buttonStyles = StyleSheet.create({
         marginTop:20,
         marginRight:20,
         backgroundColor: '#3D4144',
-
         width: squareSide,
         height: squareSide,
         borderRadius: 15,
@@ -304,11 +306,15 @@ const buttonStyles = StyleSheet.create({
     buttonColumn: {
         flexDirection: 'column',
     },
-
     buttonText:{
         marginTop:10,
         textAlign: 'center',
         color: '#E8EFE5',
         fontSize: 25,
     },
+    cameraButton:{
+        flex: 1,
+        resizeMode: 'contain',
+        aspectRatio: 0.8,
+    }
 });

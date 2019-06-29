@@ -13,11 +13,10 @@ import {
     NativeModules,
     FlatList
 } from 'react-native';
+let Configs = require('../config.js');
 
 
-const cameraStreamUrl = 'http://10.2.53.84:81/stream';
 export default class CameraStreamView extends React.Component {
-
 
     static navigationOptions = {
 
@@ -26,7 +25,6 @@ export default class CameraStreamView extends React.Component {
             backgroundColor: '#000000'
         },
         title:"Camera View",
-
 
         headerTintColor: '#B9324B',
         headerTitleStyle: {
@@ -44,25 +42,20 @@ export default class CameraStreamView extends React.Component {
          this.state = {
             key: 0
          };
-
-
-
     }
 
     refreshStream(){
         console.log("Refreshing...")
         this.setState({ key: this.state.key + 1 });
-        //this.webView.ref.reload();
     }
 
     render() {
-        let WebViewRef;
         return (
             <View style={styles.container}>
                 <WebView
                     key={this.state.key}
 
-                    source={{uri: cameraStreamUrl}}
+                    source={{uri: Configs.default.CAMERA_URL}}
                     style= {styles.camWebView}
                 />
 
@@ -82,30 +75,21 @@ export default class CameraStreamView extends React.Component {
     }
 
 }
-//
 
 const styles = StyleSheet.create({
 
-
-
     mainView: {
-
-
-        //backgroundColor: '#000000',
         backgroundColor: '#000000',
     },
     container: {
         flex: 1,
         backgroundColor: '#000000',
-
     },
     camWebView: {
         height:200,
-
         marginTop: 30,
         marginBottom: 20,
         backgroundColor:'transparent'
-
     },
     refreshButton:{
         marginTop:10,
