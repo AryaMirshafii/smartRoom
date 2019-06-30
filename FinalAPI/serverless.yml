@@ -95,7 +95,6 @@ functions:
         path: /users/{id}
         method: get
 
-
   createUser:
     handler: com.serverless.UserFiles.CreateUserHandler
     events:
@@ -117,6 +116,12 @@ functions:
         path: /users/{id}
         method: put
 
+  loginUser:
+    handler: com.serverless.UserFiles.UserLoginHandler
+    events:
+    - http:
+        path: /users/login
+        method: post
 
 
 

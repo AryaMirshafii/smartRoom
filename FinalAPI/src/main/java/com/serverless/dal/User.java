@@ -174,7 +174,7 @@ public class User {
         return this.client.describeTable(PRODUCTS_TABLE_NAME).getTable().getTableStatus().equals("ACTIVE");
     }
 
-    public List<User> list() throws IOException {
+    public List<User> list(){
         DynamoDBScanExpression scanExp = new DynamoDBScanExpression();
         List<User> results = this.mapper.scan(User.class, scanExp);
         for (User p : results) {
@@ -214,12 +214,7 @@ public class User {
         User user = null;
 
         // get user if exists
-
-
         user = get(id);
-
-
-
         if (user != null) {
             logger.info("Users - delete(): " + user.toString());
             this.mapper.delete(user);
@@ -228,6 +223,26 @@ public class User {
             return false;
         }
         return true;
+    }
+
+
+    public String isValidUser(String email, String password){
+        email = formatEmailAndPassword(email);
+        password = formatEmailAndPassword(password);
+        List<User> userList = this.list();
+        for(User user : userList){
+            if(user.email.equals(email) && user.password.equals(password)){
+                return user.id;
+            }
+        }
+        return "No user found for the email: " + email + "but stored email is" + userList.get(0).email;
+
+    }
+    private String formatEmailAndPassword(String original){
+        original = original.trim();
+        original = original.replaceAll("\\\\", "");
+        original = original.substring(1, original.length()-1);
+        return original;
     }
 
 
