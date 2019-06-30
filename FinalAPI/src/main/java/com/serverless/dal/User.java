@@ -4,6 +4,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -174,7 +175,7 @@ public class User {
         return this.client.describeTable(PRODUCTS_TABLE_NAME).getTable().getTableStatus().equals("ACTIVE");
     }
 
-    public List<User> list() throws IOException {
+    public List<User> list(){
         DynamoDBScanExpression scanExp = new DynamoDBScanExpression();
         List<User> results = this.mapper.scan(User.class, scanExp);
         for (User p : results) {
@@ -214,12 +215,7 @@ public class User {
         User user = null;
 
         // get user if exists
-
-
         user = get(id);
-
-
-
         if (user != null) {
             logger.info("Users - delete(): " + user.toString());
             this.mapper.delete(user);
@@ -228,6 +224,36 @@ public class User {
             return false;
         }
         return true;
+    }
+
+
+    public User userLogin(String email, String password){
+        logger.log(Priority.ERROR,"The given email is:" + email);
+        logger.log(Priority.ERROR,"The given password is:" + password);
+        email = formatEmailAndPassword(email);
+        password = formatEmailAndPassword(password);
+        List<User> userList = this.list();
+
+        for(User user : userList){
+            if(user.email.equals(email) && user.password.equals(password)){
+                return user;
+            }
+        }
+        return null;
+
+    }
+    private String formatEmailAndPassword(String original){
+        original = original.trim();
+        original = original.replaceAll("\\\\", "");
+        /*
+        if(!Character.isLetter(original.charAt(0)) && !Character.isLetter(original.charAt(original.length() -1))){
+            original = original.substring(1, original.length()-1);
+            logger.log(Priority.ERROR,"Replaceing first and last letters");
+        }
+        */
+
+
+        return original;
     }
 
 

@@ -19,6 +19,7 @@ import {
   Alert,
   AsyncStorage
 } from 'react-native';
+
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import iTunes from 'react-native-itunes';
 
@@ -26,7 +27,7 @@ import RoomView from "./RoomView";
 import MusicView from "./MusicView";
 import MusicListView from "./screens/MusicListView";
 
-import Login from "./screens/Login"
+import NewLogin from "./screens/NewLogin"
 import Register from "./screens/Register"
 import RoomList from "./screens/RoomList"
 
@@ -34,19 +35,29 @@ import AddRoomScreen from "./screens/AddRoomScreen"
 
 import CameraStreamView from "./screens/CameraStreamView"
 
+var userId = AsyncStorage.getItem('id');
 
-var Navigation = createStackNavigator(
+var Navigation = userId? createStackNavigator(
     {
-  First: {screen: Login},
-  Second: {screen: Register},
-  Third: {screen: RoomList},
-  Fourth: {screen: RoomView},
-  Fifth: {screen: MusicListView},
+
+      Third: {screen: RoomList},
+      Fourth: {screen: RoomView},
+      Fifth: {screen: MusicListView},
       AddRoom:{screen: AddRoomScreen},
       CameraView:{screen: CameraStreamView},
 
+    }): createStackNavigator(
+    {
 
-});
+      First: {screen: NewLogin},
+      Second: {screen: Register},
+      Third: {screen: RoomList},
+      Fourth: {screen: RoomView},
+      Fifth: {screen: MusicListView},
+      AddRoom:{screen: AddRoomScreen},
+      CameraView:{screen: CameraStreamView},
+      
+    });
 
 
 

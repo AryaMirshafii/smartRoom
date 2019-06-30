@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -13,7 +14,6 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* SmartRoomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SmartRoomTests.m */; };
 		0AD603571D2E423DAB764005 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A0209177E2D4AE9A6BCD520 /* Octicons.ttf */; };
-		0E849673328F4089ACD2F927 /* libRNTrackPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A431B548CA9445A79ACC4DC2 /* libRNTrackPlayer.a */; };
 		104B99F8A3D342818F73B715 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFA20A4F4098431AB4B425BF /* FontAwesome5_Regular.ttf */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -56,7 +56,6 @@
 		67ADEF38A4F540368233FEFE /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D54E55348E444DADA86E4A28 /* libRNVectorIcons.a */; };
 		8022DAEA6EC0445FB6313652 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D4C1A7209D5423BB11883FD /* Feather.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8E68EC816CF4417195BE97B2 /* libRNAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6855CABC9DC4C7FA2D7D5A6 /* libRNAudio.a */; };
 		927B4E3B793944C193B177D1 /* libRNiTunes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 096908898DDC4EE7AC79D081 /* libRNiTunes.a */; };
 		A5B3675909284DD193607E29 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 211BB2C555EA4EF09A4F0F6C /* FontAwesome5_Brands.ttf */; };
 		A93B6EC0AA1447378E4E2B29 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F8B6954DE504C0A8078FA5F /* MaterialIcons.ttf */; };
@@ -411,6 +410,13 @@
 			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
 			remoteInfo = "RNGestureHandler-tvOS";
 		};
+		D1BA03AE22C9107F003F6DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBBA2D1A601D0E00E9B192;
+			remoteInfo = React;
+		};
 		D1E4A251229DFC22000F6D7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFCBCDBDA523409585B27C94 /* RNReactNativeGetMusicFiles.xcodeproj */;
@@ -539,9 +545,7 @@
 				360AD074684445B59918818F /* libBleClient.a in Frameworks */,
 				927B4E3B793944C193B177D1 /* libRNiTunes.a in Frameworks */,
 				4F1AF0DE532B4AA8B493340A /* libRNReactNativeGetMusicFiles.a in Frameworks */,
-				8E68EC816CF4417195BE97B2 /* libRNAudio.a in Frameworks */,
 				AE2B2E1E9E554012803490E1 /* libMusicControl.a in Frameworks */,
-				0E849673328F4089ACD2F927 /* libRNTrackPlayer.a in Frameworks */,
 				67ADEF38A4F540368233FEFE /* libRNVectorIcons.a in Frameworks */,
 				392242DDED6CC71285F87859 /* Pods_SmartRoom.framework in Frameworks */,
 			);
@@ -688,7 +692,6 @@
 				215028D2DC2D057C84BD88D8 /* Pods-SmartRoomTests.debug.xcconfig */,
 				CC9B77DE07964899A7D6CD51 /* Pods-SmartRoomTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -958,11 +961,12 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				81EF23721DD8FB65A4F546C2 /* [CP] Embed Pods Frameworks */,
+				C6534F9BB782190742F96325 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1BA03AF22C9107F003F6DDA /* PBXTargetDependency */,
 			);
 			name = SmartRoom;
 			productName = "Hello World";
@@ -1556,28 +1560,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		81EF23721DD8FB65A4F546C2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C1F68DF60664ADF1D7E4141D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1598,6 +1580,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6534F9BB782190742F96325 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2B48D78E325FD0B4A63D3E8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1718,6 +1722,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* SmartRoom-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		D1BA03AF22C9107F003F6DDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = React;
+			targetProxy = D1BA03AE22C9107F003F6DDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
