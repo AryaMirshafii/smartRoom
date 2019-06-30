@@ -21,15 +21,24 @@ public class UserLoginHandler implements RequestHandler<Map<String, Object>, Api
             String userEmail = body.get("email").toString();
             String userPassword = body.get("password").toString();
 
+            User foundUser = new User().userLogin(userEmail, userPassword);
 
-            String userId = new User().isValidUser(userEmail, userPassword);
 
+
+            if(foundUser != null){
+                return ApiGatewayResponse.builder()
+                        .setStatusCode(200)
+                        .setObjectBody(foundUser)
+                        .setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
+                        .build();
+            }
 
             return ApiGatewayResponse.builder()
-                    .setStatusCode(200)
-                    .setObjectBody(userId)
+                    .setStatusCode(401)
+                    .setObjectBody(null)
                     .setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
                     .build();
+
 
         } catch (Exception ex) {
             logger.error("Error in gettinbg user login User: " + ex);

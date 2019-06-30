@@ -154,17 +154,18 @@ export default class RoomList extends React.Component {
                 .then((response) => response.json())
                 .then((responseJson) => {
                     //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
+                    if(responseJson["name"]){
+                        var roomName = ''  + responseJson["name"];
+                            console.log("Room name is: " + roomName);
+                        this._storeData(this.state.userRoomIds[i],roomName ).then();
 
-                    var roomName = ''  + responseJson["name"];
 
-                    console.log("Room name is: " + roomName);
-                    this._storeData(this.state.userRoomIds[i],roomName ).then();
+                        roomData.push({
+                            name: roomName,
+                            key: ++keyIndex
+                        })
+                    }
 
-
-                    roomData.push({
-                        name: roomName,
-                        key: ++keyIndex
-                    })
 
 
 

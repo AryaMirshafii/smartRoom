@@ -4,6 +4,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -226,22 +227,32 @@ public class User {
     }
 
 
-    public String isValidUser(String email, String password){
+    public User userLogin(String email, String password){
+        logger.log(Priority.ERROR,"The given email is:" + email);
+        logger.log(Priority.ERROR,"The given password is:" + password);
         email = formatEmailAndPassword(email);
         password = formatEmailAndPassword(password);
         List<User> userList = this.list();
+
         for(User user : userList){
             if(user.email.equals(email) && user.password.equals(password)){
-                return user.id;
+                return user;
             }
         }
-        return "No user found for the email: " + email + "but stored email is" + userList.get(0).email;
+        return null;
 
     }
     private String formatEmailAndPassword(String original){
         original = original.trim();
         original = original.replaceAll("\\\\", "");
-        original = original.substring(1, original.length()-1);
+        /*
+        if(!Character.isLetter(original.charAt(0)) && !Character.isLetter(original.charAt(original.length() -1))){
+            original = original.substring(1, original.length()-1);
+            logger.log(Priority.ERROR,"Replaceing first and last letters");
+        }
+        */
+
+
         return original;
     }
 
