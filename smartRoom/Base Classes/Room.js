@@ -2,6 +2,7 @@ class Room {
 
 
     constructor(name,identifier) {
+        this.id = identifier;
         this.roomName = name;
         this.musicEnabled = false;
         this.lightEnabled = false;

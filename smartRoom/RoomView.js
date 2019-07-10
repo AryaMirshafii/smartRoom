@@ -12,14 +12,6 @@ import {
     Image
 } from 'react-native';
 
-
-
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-    android:
-        'Double tap R on your keyboard to reload,\n' +
-        'Shake or press menu button for dev menu',
-});
 const outerCircleDim = 250;
 const innerCircleDim = 240;
 const circleMargin =  Math.abs(outerCircleDim - innerCircleDim)
@@ -63,8 +55,7 @@ export default class RoomView extends React.Component {
         //this.props.navigation
         var {navigate} = this.props.navigation;
         const { navigation } = this.props;
-        const roomName = navigation.getParam('roomName', 'Room Info');
-
+        const roomId = navigation.getParam('roomId', '');
 
         return (
             <ScrollView style={styles.mainView}>
@@ -113,7 +104,7 @@ export default class RoomView extends React.Component {
 
                         <View style={buttonStyles.buttonRow}>
                             <TouchableOpacity style={buttonStyles.leftButton} onPress={
-                                ()=>navigate("Fifth", {})
+                                ()=>navigate("Fifth", {roomId: roomId})
 
 
 

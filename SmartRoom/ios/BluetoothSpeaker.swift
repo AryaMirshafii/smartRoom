@@ -8,12 +8,13 @@
 
 import Foundation
 import AVFoundation
+import Alamofire
 
 @objc(BluetoothSpeaker)
 class BluetoothSpeaker: NSObject {
-  
+  private var ConnectedToBluetooth = false;
   @objc
-  func checkBluetooth(songName: String) {
+  func checkBluetooth(){
     
     do {
       let currentRoute = AVAudioSession.sharedInstance().currentRoute
@@ -24,12 +25,10 @@ class BluetoothSpeaker: NSObject {
           print("1:::PORT NAME IS" + route.portName)
           let portDescription = route as! AVAudioSessionPortDescription
           try AVAudioSession.sharedInstance().setPreferredInput(portDescription)
-          
+          ConnectedToBluetooth =  true;
+          return;
         } else {
           print("No Bluetooth, speaker only")
-          
-          //AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-         
         }
         
       }
@@ -37,19 +36,23 @@ class BluetoothSpeaker: NSObject {
       print("audioSession properties weren't set!", error)
     }
     
-   
+    ConnectedToBluetooth =  false;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
- 
-  
-  
+  @objc(updateRoom:roomId:)
+  func updateRoom(songName:String, roomId: String){
+    checkBluetooth();
+    if(ConnectedToBluetooth && !roomId.isEmpty){
+      let urlString = "https://fr47hclryb.execute-api.us-east-1.amazonaws.com/dev/rooms/" + roomId
+      let params = [ "songPlaying": songName] as [String : String]
+      Alamofire.request(urlString, method: .put, parameters: params, encoding: JSONEncoding.default)
+        .responseJSON { response in
+          debugPrint(response)
+          print("it worked!!!")
+      }
+    }
+  }
 }
+
+
 

@@ -10,4 +10,5 @@
 #import "React/RCTBridgeModule.h"
 @interface RCT_EXTERN_MODULE(BluetoothSpeaker, NSObject)
 RCT_EXTERN_METHOD(checkBluetooth)
+RCT_EXTERN_METHOD(updateRoom:(NSString *)songName roomId:(NSString *)roomId)
 @end

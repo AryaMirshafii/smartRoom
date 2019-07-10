@@ -31,21 +31,24 @@ public class PutRoomHandler implements RequestHandler<Map<String, Object>, ApiGa
 
                 JsonNode body = new ObjectMapper().readTree((String) input.get("body"));
 
+                double inputTemperature = (body.get("temperature") != null)? body.get("temperature").asDouble(): room.getTemperature();
+                int inputVisitorStatus = (body.get("visitorStatus") != null)? body.get("visitorStatus").asInt(): room.getVisitorStatus();
+                int inputLightsOn =  (body.get("lightsOn") != null)?  body.get("lightsOn").asInt():  room.getLightsOn();
+                double inputLatitutde = (body.get("latitude") != null)? body.get("latitude").asDouble(): room.getLatitude();
+                double inputLongitude = (body.get("longitude") != null)? body.get("longitude").asDouble(): room.getLatitude();
+                String inputSongPlaying = (body.get("songPlaying") != null)? body.get("songPlaying").asText(): room.getSongPlaying();
+                String inputParentUser = (body.get("parentUser") != null)? body.get("parentUser").asText(): room.getParentUser();
+                String inputRoomName = (body.get("name") != null)? body.get("name").asText(): room.getName();
 
-                room.setTemperature(body.get("temperature").asDouble());
-                room.setVisitorStatus((int) body.get("visitorStatus").asInt());
-                room.setLightsOn((int) body.get("lightsOn").asInt());
-
-                room.setLatitude((float) body.get("latitude").asDouble());
-                room.setLongitude((float) body.get("longitude").asDouble());
-                room.setSongPlaying(body.get("songPlaying").asText());
-                room.setParentUser(body.get("parentUser").asText());
-                room.setName(body.get("name").asText());
+                room.setTemperature(inputTemperature);
+                room.setVisitorStatus(inputVisitorStatus);
+                room.setLightsOn(inputLightsOn);
+                room.setLatitude((float) inputLatitutde);
+                room.setLongitude((float) inputLongitude);
+                room.setSongPlaying(inputSongPlaying);
+                room.setParentUser(inputParentUser);
+                room.setName(inputRoomName);
                 room.save(room);
-
-
-
-
 
                 return ApiGatewayResponse.builder()
                         .setStatusCode(200)

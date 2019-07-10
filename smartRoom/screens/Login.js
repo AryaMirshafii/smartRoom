@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 let Configs = require('../config.js');
 
-import UserManager from './UserManager'
+import UserManager from '../Data Managers/UserManager'
 import {
     StyleSheet,
     Text,

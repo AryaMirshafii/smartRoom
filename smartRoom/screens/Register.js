@@ -1,6 +1,3 @@
-import React, { Component } from 'react';
-let Configs = require('../config.js');
-
 import {
     StyleSheet,
     Text,
@@ -14,6 +11,8 @@ import {
     AsyncStorage
 
 } from 'react-native';
+import React, { Component } from 'react';
+let Configs = require('../config.js');
 
 export default class Register extends Component {
     static navigationOptions = {

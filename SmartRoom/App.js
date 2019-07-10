@@ -34,21 +34,21 @@ import RoomList from "./screens/RoomList"
 import AddRoomScreen from "./screens/AddRoomScreen"
 
 import CameraStreamView from "./screens/CameraStreamView"
+import AuthView from "./screens/AuthView"
 
-var userId = AsyncStorage.getItem('id');
 
-var Navigation = userId? createStackNavigator(
+async function getUserName(){
+    return await AsyncStorage.getItem('id');
+
+}
+
+
+
+
+
+var Navigation =  createStackNavigator(
     {
-
-      Third: {screen: RoomList},
-      Fourth: {screen: RoomView},
-      Fifth: {screen: MusicListView},
-      AddRoom:{screen: AddRoomScreen},
-      CameraView:{screen: CameraStreamView},
-
-    }): createStackNavigator(
-    {
-
+        Auth:{screen: AuthView},
       First: {screen: NewLogin},
       Second: {screen: Register},
       Third: {screen: RoomList},
@@ -56,10 +56,8 @@ var Navigation = userId? createStackNavigator(
       Fifth: {screen: MusicListView},
       AddRoom:{screen: AddRoomScreen},
       CameraView:{screen: CameraStreamView},
-      
+
     });
-
-
-
-
 export default createAppContainer(Navigation);
+
+

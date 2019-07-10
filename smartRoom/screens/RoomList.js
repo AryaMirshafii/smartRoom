@@ -2,34 +2,22 @@ import React, {Component} from 'react';
 let Configs = require('../config.js');
 import {Platform, StyleSheet, Text, AsyncStorage, View,WebView,Dimensions,FlatList, TouchableOpacity, ScrollView,Alert} from 'react-native';
 
-import {ListItem} from "react-native-elements";import Room from './Room'
+import {ListItem} from "react-native-elements";
 
-
+import RoomController from "../Data Managers/RoomManager"
 
 const outerCircleDim = 250;
 const innerCircleDim = 240;
 const edgeMargin = 20;
 const squareSide = (Dimensions.get('window').width)/2 - 40;
 
-
-/*
-const roomData = [{
-
-        roomName: 'Bedroom',
-        key:0
-    },
-    {
-        roomName: 'Kitchen',
-        key:1
-
-}
-];*/
 var keyIndex = 0;
 const roomData = [
     {
 
     name: 'Add Room',
-    key:keyIndex
+    key: keyIndex,
+        id: ''
 
     },
 ];
@@ -54,6 +42,7 @@ export default class RoomList extends React.Component {
 
     constructor(props) {
         super(props);
+        this.roomController = new RoomController();
         this.hasRooms = false;
 
         this.state = {
@@ -146,35 +135,28 @@ export default class RoomList extends React.Component {
         for(var i = 0; i < this.state.userRoomIds.length; i++){
             console.log("looking at:" + this.state.userRoomIds[i]);
 
-
-
-
-
             fetch(Configs.default.ROOM_URL + '/' + this.state.userRoomIds[i])
                 .then((response) => response.json())
                 .then((responseJson) => {
                     //console.log("ME RESPONSE ES" + responseJson["roomIds"]);
                     if(responseJson["name"]){
-                        var roomName = ''  + responseJson["name"];
+                        let roomName = ''  + responseJson["name"];
+                        let roomId = ''  + responseJson["id"];
                             console.log("Room name is: " + roomName);
                         this._storeData(this.state.userRoomIds[i],roomName ).then();
 
 
                         roomData.push({
                             name: roomName,
-                            key: ++keyIndex
+                            key: ++keyIndex,
+                            id: roomId
+
                         })
                     }
-
-
-
-
                 })
                 .catch((error) => {
                     console.error(error);
                 })
-
-
         }
     }
 
@@ -188,6 +170,7 @@ export default class RoomList extends React.Component {
         }else{
             navigate("Fourth", {
                 roomName: roomItem.name,
+                roomId: roomItem.id
             })
         }
 

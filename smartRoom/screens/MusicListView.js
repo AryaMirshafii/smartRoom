@@ -43,13 +43,6 @@ export default class MusicListView extends React.Component {
             songs:[],
         }
 
-        let btStatus = NativeModules.BluetoothSpeaker.Connect();
-        console.log("BT STATUS IS:::::::::" + btStatus)
-
-
-
-
-
         iTunes.getTracks().then((tracks) => {
             this.cleanUpData(tracks)
             this.setState({ songs: tracks })
@@ -118,7 +111,16 @@ export default class MusicListView extends React.Component {
 
         }
     }
+
+
+    playSong = (roomId, song) => {
+        iTunes.playTrack(song);
+        NativeModules.BluetoothSpeaker.updateRoom(song.title, roomId);
+    };
+
     render() {
+        const { navigation } = this.props;
+        const roomId = navigation.getParam('roomId', '');
         return (
             <FlatList
                 style = {styles.mainView}
@@ -126,7 +128,7 @@ export default class MusicListView extends React.Component {
                 renderItem={({item}) =>
 
                     <TouchableOpacity style={styles.musicListItem} onPress={
-                        ()=>iTunes.playTrack(this.state.songs[item.index])
+                        ()=>this.playSong(roomId, this.state.songs[item.index])
 
                     }>
                         <Text style = {styles.songNameText}>{item.title}</Text>
