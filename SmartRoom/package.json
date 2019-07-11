@@ -17,6 +17,7 @@
     "react-native-gesture-handler": "^1.2.1",
     "react-native-get-music-files": "^2.1.0",
     "react-native-itunes": "^0.5.0",
+    "react-native-modal": "^11.1.0",
     "react-native-music-control": "^0.10.4",
     "react-native-orientation-locker": "^1.1.6",
     "react-native-slider": "^0.11.0",

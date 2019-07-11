@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec97837a-af32-460e-9e25-38b3cf24b2d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SmartRoom/Data Managers/RoomManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SmartRoom/Data Managers/UserManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SmartRoom/screens/AuthView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/serverless/RoomFiles/PutRoomHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/serverless/RoomFiles/PutRoomHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartRoom/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartRoom/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartRoom/ios/BluetoothSpeaker.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartRoom/ios/BluetoothSpeaker.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartRoom/screens/NewLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartRoom/screens/NewLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/Base Classes/Room.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smartRoom/Base Classes/Room.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/screens/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smartRoom/screens/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartRoom/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartRoom/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartRoom/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartRoom/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../smartRoom/screens/MusicListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smartRoom/screens/MusicListView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/screens/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smartRoom/screens/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/screens/Room.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/screens/RoomList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../smartRoom/screens/RoomList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smartRoom/screens/UserManager.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/serverless/RoomFiles/PutRoomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+            <state relative-caret-position="270">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -537,12 +526,12 @@
       <workItem from="1561915603600" duration="7250000" />
       <workItem from="1561927995431" duration="1070000" />
       <workItem from="1561931469775" duration="4595000" />
-      <workItem from="1562722366819" duration="1605000" />
+      <workItem from="1562722366819" duration="1620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83591000" />
+    <option name="totallyTimeSpent" value="83606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,6 +544,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="921" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -788,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/serverless/RoomFiles/PutRoomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="40" column="56" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        <state relative-caret-position="270">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
         </state>
       </provider>
     </entry>
