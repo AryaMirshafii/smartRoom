@@ -3,6 +3,8 @@ package com.smartroom;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.wix.reactnativenotifications.RNNotificationsPackage;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import org.wonday.orientation.OrientationPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
@@ -33,6 +35,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNNotificationsPackage(),
+            new ReactNativePushNotificationPackage(),
             new ReactVideoPackage(),
             new OrientationPackage(),
             new ReactNativeConfigPackage(),

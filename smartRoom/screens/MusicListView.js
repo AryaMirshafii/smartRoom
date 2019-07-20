@@ -16,9 +16,7 @@ import {
     Button,
     Image
 } from 'react-native';
-import { BleManager } from 'react-native-ble-plx';
 import iTunes from 'react-native-itunes';
-import Modal from "react-native-modal";
 
 export default class MusicListView extends React.Component {
     static navigationOptions = {
@@ -41,25 +39,18 @@ export default class MusicListView extends React.Component {
 
     constructor() {
         super();
-        this.manager = new BleManager();
         this.state = {
             songs:[],
             isPlaying:false,
             visibleModalId: null,
             currentSongName:'',
-            currentSong:'',
+            currentSong:null,
             albumArt:null,
 
         };
 
 
-        iTunes.getCurrentTrack().then(track => {
-            if(track){
-                this.setState({ isPlaying: true });
-                this.setState({ currentSongName: track.title });
-            }
-
-        });
+        this.getCurrentSong();
 
         iTunes.getTracks().then((tracks) => {
             this.cleanUpData(tracks)
@@ -68,31 +59,6 @@ export default class MusicListView extends React.Component {
 
         });
         console.log("Initialized Music List View")
-    }
-
-    componentWillMount() {
-
-        const subscription = this.manager.onStateChange((state) => {
-            if (state === 'PoweredOn') {
-                this.manager.connectedDevices().then((devices) => {
-                    console.log("PRINTING...." + devices.length);
-                });
-                subscription.remove();
-            }
-        }, true);
-    }
-    scanAndConnect() {
-        this.manager.startDeviceScan(null, null, (error, device) => {
-            if (error) {
-                return
-            }
-
-            console.log("Device name of::::::::::: " + device.name)
-            if (device.name === 'TI BLE Sensor Tag' ||
-                device.name === 'SensorTag') {
-                this.manager.stopDeviceScan();
-            }
-        });
     }
 
     cleanUpData(tracks){
@@ -115,12 +81,14 @@ export default class MusicListView extends React.Component {
 
     playSong = (roomId, song) => {
 
+
+
         this.setState({ isPlaying: true });
         this.setState({ currentSongName: song.title });
         iTunes.playTrack(song);
         NativeModules.BluetoothSpeaker.updateRoom(song.title, roomId);
-
         this.updateSong().then();
+        this.getCurrentSong();
     };
 
     async updateSong(){
@@ -131,6 +99,27 @@ export default class MusicListView extends React.Component {
 
         });
 
+    }
+
+    NavigateToScreen(){
+        var {navigate} = this.props.navigation;
+
+            navigate("Music", {
+                songs: this.state.songs,
+                currentSong: this.state.currentSong
+            })
+
+
+    }
+
+    getCurrentSong(){
+        iTunes.getCurrentTrack().then(track => {
+            if(track){
+                this.setState({ isPlaying: true });
+                this.setState({ currentSongName: track.title });
+                this.setState({ currentSong: track});
+            }
+        });
     }
 
     render() {
@@ -162,7 +151,8 @@ export default class MusicListView extends React.Component {
 
                 {renderIf(this.state.isPlaying,
 
-                    <TouchableOpacity style = {styles.musicPopup}>
+                    <TouchableOpacity style = {styles.musicPopup} onPress={
+                        ()=>this.NavigateToScreen()}>
                         {renderIf(this.state.albumArt,
                         <Image
                             style={styles.albumArtModal}
@@ -180,7 +170,7 @@ export default class MusicListView extends React.Component {
                         )}
 
 
-                        <Text style={styles.songNameModalText}>
+                        <Text  numberOfLines={1} style={styles.songNameModalText}>
                             {this.state.currentSongName}
                         </Text>
 
@@ -282,11 +272,15 @@ const styles = StyleSheet.create({
         marginRight:12,
         textAlign: 'left',
         color: '#B9324B',
-        fontSize: 25,
+        fontSize: 21,
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     albumArtModal: {
-        height:60,
-        width:60,
+        height:55,
+        width:55,
         marginTop: 10,
         marginBottom: 10,
         marginLeft: 10,

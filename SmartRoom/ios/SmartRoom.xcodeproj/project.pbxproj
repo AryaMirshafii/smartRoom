@@ -64,8 +64,10 @@
 		BD7EF810A99E485584B6CBB2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5778FE1C25254FFB882B6BFA /* Foundation.ttf */; };
 		D008D95E0B1F400CB1AC7420 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7385E4EC1FB48FBB48230FF /* libRNGestureHandler.a */; };
 		D1801E05229B0AA1008C33C5 /* addingSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1801E04229B0AA1008C33C5 /* addingSwift.swift */; };
+		D1CA156A22DC1D1D00139776 /* libRNNotifications.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4DB1522DC1C68009D48B9 /* libRNNotifications.a */; };
 		D1E4A2A4229E1791000F6D7A /* BluetoothSpeaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4A2A3229E1791000F6D7A /* BluetoothSpeaker.swift */; };
 		D1E4A2D1229E17CC000F6D7A /* BlueoothSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = D1E4A2D0229E17CC000F6D7A /* BlueoothSpeaker.m */; };
+		D1F4DA6322DBC669009D48B9 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1F4DA4222DBC63D009D48B9 /* libRCTPushNotification.a */; };
 		D91C71385E804FD49650E849 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D2A2F2D133642588E869CE6 /* AntDesign.ttf */; };
 		DCAC297FFD2A412DB44A3180 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79360D1C31F3444E9B14E0C0 /* libRNGestureHandler-tvOS.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -431,6 +433,34 @@
 			remoteGlobalIDString = 42F559BA1CFC90C400DC3F84;
 			remoteInfo = RNAudio;
 		};
+		D1F4DA4122DBC63D009D48B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F4DA2D22DBC63D009D48B9 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		D1F4DA4322DBC63D009D48B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F4DA2D22DBC63D009D48B9 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
+		D1F4DB1422DC1C68009D48B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F4DAE322DC1C68009D48B9 /* RNNotifications.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNNotifications;
+		};
+		D1F4DB1622DC1C68009D48B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1F4DAE322DC1C68009D48B9 /* RNNotifications.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 508CE7C822D12B2600357815;
+			remoteInfo = RNNotificationsTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -498,8 +528,11 @@
 		CC9B77DE07964899A7D6CD51 /* Pods-SmartRoomTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoomTests.release.xcconfig"; path = "Target Support Files/Pods-SmartRoomTests/Pods-SmartRoomTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1801E03229B0AA1008C33C5 /* SmartRoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartRoom-Bridging-Header.h"; sourceTree = "<group>"; };
 		D1801E04229B0AA1008C33C5 /* addingSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addingSwift.swift; sourceTree = "<group>"; };
+		D1DC4C2622DBBAC400B7F04A /* SmartRoom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SmartRoom.entitlements; path = SmartRoom/SmartRoom.entitlements; sourceTree = "<group>"; };
 		D1E4A2A3229E1791000F6D7A /* BluetoothSpeaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSpeaker.swift; sourceTree = "<group>"; };
 		D1E4A2D0229E17CC000F6D7A /* BlueoothSpeaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueoothSpeaker.m; sourceTree = "<group>"; };
+		D1F4DA2D22DBC63D009D48B9 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		D1F4DAE322DC1C68009D48B9 /* RNNotifications.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNotifications.xcodeproj; path = "../node_modules/react-native-notifications/RNNotifications/RNNotifications.xcodeproj"; sourceTree = "<group>"; };
 		D54E55348E444DADA86E4A28 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		DBE9930E12AB4CF5B4931746 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
 		DFA20A4F4098431AB4B425BF /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
@@ -528,6 +561,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CA156A22DC1D1D00139776 /* libRNNotifications.a in Frameworks */,
+				D1F4DA6322DBC669009D48B9 /* libRCTPushNotification.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
@@ -665,6 +700,7 @@
 		13B07FAE1A68108700A75B9A /* SmartRoom */ = {
 			isa = PBXGroup;
 			children = (
+				D1DC4C2622DBBAC400B7F04A /* SmartRoom.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -753,6 +789,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D1F4DAE322DC1C68009D48B9 /* RNNotifications.xcodeproj */,
+				D1F4DA2D22DBC63D009D48B9 /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -930,6 +968,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D1F4DA2E22DBC63D009D48B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1F4DA4222DBC63D009D48B9 /* libRCTPushNotification.a */,
+				D1F4DA4422DBC63D009D48B9 /* libRCTPushNotification-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1F4DAE422DC1C68009D48B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1F4DB1522DC1C68009D48B9 /* libRNNotifications.a */,
+				D1F4DB1722DC1C68009D48B9 /* RNNotificationsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1032,6 +1088,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1094,6 +1153,10 @@
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
 				},
 				{
+					ProductGroup = D1F4DA2E22DBC63D009D48B9 /* Products */;
+					ProjectRef = D1F4DA2D22DBC63D009D48B9 /* RCTPushNotification.xcodeproj */;
+				},
+				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
 					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
 				},
@@ -1124,6 +1187,10 @@
 				{
 					ProductGroup = D153C8E0229C7DDB00FEA534 /* Products */;
 					ProjectRef = 47AF5145C35A408080267F83 /* RNiTunes.xcodeproj */;
+				},
+				{
+					ProductGroup = D1F4DAE422DC1C68009D48B9 /* Products */;
+					ProjectRef = D1F4DAE322DC1C68009D48B9 /* RNNotifications.xcodeproj */;
 				},
 				{
 					ProductGroup = D1E4A24E229DFC22000F6D7A /* Products */;
@@ -1483,6 +1550,34 @@
 			fileType = archive.ar;
 			path = libRNAudio.a;
 			remoteRef = D1E4A290229E033D000F6D7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1F4DA4222DBC63D009D48B9 /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = D1F4DA4122DBC63D009D48B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1F4DA4422DBC63D009D48B9 /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = D1F4DA4322DBC63D009D48B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1F4DB1522DC1C68009D48B9 /* libRNNotifications.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNNotifications.a;
+			remoteRef = D1F4DB1422DC1C68009D48B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D1F4DB1722DC1C68009D48B9 /* RNNotificationsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNNotificationsTests.xctest;
+			remoteRef = D1F4DB1622DC1C68009D48B9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1849,6 +1944,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SmartRoom/SmartRoom.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = Y4XKW822R6;
@@ -1870,7 +1966,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.SmartRoom;
 				PRODUCT_NAME = SmartRoom;
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartRoom-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1885,6 +1981,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SmartRoom/SmartRoom.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y4XKW822R6;
 				HEADER_SEARCH_PATHS = (
@@ -1905,7 +2002,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.SmartRoom;
 				PRODUCT_NAME = SmartRoom;
 				SWIFT_OBJC_BRIDGING_HEADER = "SmartRoom-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

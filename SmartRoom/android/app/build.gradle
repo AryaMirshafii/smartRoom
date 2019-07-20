@@ -138,6 +138,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-notifications')
+    implementation project(':react-native-push-notification')
     implementation project(':react-native-video')
     implementation project(':react-native-orientation-locker')
     implementation project(':react-native-config')

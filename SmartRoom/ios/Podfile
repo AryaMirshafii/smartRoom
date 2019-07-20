@@ -7,9 +7,15 @@ target 'SmartRoom' do
 
   # Pods for SmartRoom
 pod 'Alamofire'
-
+pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
   
 
+
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
+  pod 'react-native-notifications', :path => '../node_modules/react-native-notifications'
+
+  pod 'react-native-orientation-locker', :path => '../node_modules/react-native-orientation-locker'
 
   target 'SmartRoomTests' do
     inherit! :search_paths

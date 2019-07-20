@@ -1,38 +1,36 @@
-/*  
-    Arduino with PIR motion sensor
-    For complete project details, visit: http://RandomNerdTutorials.com/pirsensor
-    Modified by Rui Santos based on PIR sensor by Limor Fried
-*/
- 
-int led = 13;                // the pin that the LED is atteched to
-int sensor = 10;              // the pin that the sensor is atteched to
-int state = LOW;             // by default, no motion detected
-int val = 0;                 // variable to store the sensor status (value)
+#define SIGNAL_PIN 12
 
-void setup() {
-  pinMode(led, OUTPUT);      // initalize LED as an output
-  pinMode(sensor, INPUT);    // initialize sensor as an input
-  Serial.begin(9600);        // initialize serial
+double motionCount = 0;
+void setup()
+{
+  Serial.begin(9600);
+  //pinMode(SIGNAL_PIN, INPUT);
+  //digitalWrite (SIGNAL_PIN, LOW);
+}
+void loop() {
+  
+  checkMotion();
+  
+  delay(1000);
 }
 
-void loop(){
-  val = digitalRead(sensor);   // read sensor value
-  if (val == HIGH) {           // check if the sensor is HIGH
-    digitalWrite(led, HIGH);   // turn LED ON
-    delay(100);                // delay 100 milliseconds 
+void checkMotion(){
+  int pinAnalog = analogRead(SIGNAL_PIN);
+    Serial.println(pinAnalog);
+  /*
+  if(digitalRead(SIGNAL_PIN)==HIGH) {
     
-    if (state == LOW) {
-      Serial.println("Motion detected!"); 
-      state = HIGH;       // update variable state to HIGH
-    }
-  } 
-  else {
-      digitalWrite(led, LOW); // turn LED OFF
-      delay(200);             // delay 200 milliseconds 
-      
-      if (state == HIGH){
-        Serial.println("Motion stopped!");
-        state = LOW;       // update variable state to LOW
-    }
+    Serial.println("..........Movement detected...........");
+    motionCount++;
+    
+  } else {
+    Serial.println("Did not detect movement.");
   }
+
+  if(motionCount >= 16){
+    
+    motionCount = 0;
+  }
+  */
 }
+

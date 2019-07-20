@@ -6,10 +6,12 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.serverless.ApiGatewayResponse;
+import com.serverless.Notifications.NotificationHandler;
 import com.serverless.Response;
 import com.serverless.dal.Room;
 import com.serverless.dal.User;
 import org.apache.log4j.Logger;
+import org.apache.log4j.Priority;
 
 import java.net.UnknownServiceException;
 import java.util.Collections;
@@ -22,6 +24,7 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 	@Override
 	public ApiGatewayResponse handleRequest(Map<String, Object> input, Context context) {
 
+		NotificationHandler snsHandler = new NotificationHandler();
       try {
           // get the 'body' from input
           JsonNode body = new ObjectMapper().readTree((String) input.get("body"));
@@ -39,6 +42,7 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 		   */
 
 		  Room room = new Room();
+		  int visitorStatus = (int) body.get("visitorStatus").asInt();
 		  //room.setId(body.get("id").asText());
 		  room.setTemperature(body.get("visitorStatus").asDouble());
 		  room.setVisitorStatus((int) body.get("visitorStatus").asInt());
@@ -51,30 +55,20 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
 		  room.setName(body.get("name").asText());
 
 
-		  room.save(room);
-		  room.updateUsers();
 
 
+		  if(visitorStatus == 1){
+		  	logger.log(Priority.DEBUG, "Sending message");
+		  	snsHandler.sendIntruderMessage(room.getName());
+		  }else{
+              logger.log(Priority.DEBUG, "Not Sending message");
+          }
+
+          room.save(room);
+          room.updateUsers();
 
 
-
-
-
-
-
-
-		  /**
-
-          Product product = new Product();
-          // product.setId(body.get("id").asText());
-          product.setName(body.get("name").asText());
-          product.setPrice((float) body.get("price").asDouble());
-          product.save(product);
-
-		   */
-
-          // send the response back
-      		return ApiGatewayResponse.builder()
+          return ApiGatewayResponse.builder()
       				.setStatusCode(200)
       				.setObjectBody(room)
       				.setHeaders(Collections.singletonMap("X-Powered-By", "AWS Lambda & Serverless"))
@@ -84,7 +78,7 @@ public class CreateRoomHandler implements RequestHandler<Map<String, Object>, Ap
           logger.error("Error in saving room: " + ex);
 
           // send the error response back
-    			Response responseBody = new Response("Error in saving room: ", input);
+    			Response responseBody = new Response("Error in saving room: " + ex, input);
     			return ApiGatewayResponse.builder()
     					.setStatusCode(500)
     					.setObjectBody(responseBody)

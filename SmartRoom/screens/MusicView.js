@@ -1,14 +1,12 @@
-
 import React, {Component} from 'react';
 import {Alert, Dimensions, StyleSheet, Text, TouchableOpacity, View, Image} from "react-native";
-
 import Slider from "react-native-slider";
-
+import iTunes from 'react-native-itunes';
 
 
 const albuMlength = (Dimensions.get('window').width) - 40;
 const pausePlaySize = 60;
-export default class App extends React.Component {
+export default class App extends Component {
 
     static navigationOptions = {
         title: 'Music',
@@ -30,22 +28,47 @@ export default class App extends React.Component {
     };
 
 
+    constructor(){
+        super();
+        this.numPauseClicks = 0;
+    }
+
+    playPrevious(){
+        iTunes.previous();
+    }
+
+    playNext(){
+        iTunes.next();
+    }
+
+    playPauseSong(){
+        if(this.numPauseClicks % 2 === 0){
+            iTunes.pause();
+        }else{
+            iTunes.play();
+        }
+        this.numPauseClicks++;
+    }
+
 
 
     render() {
-        const {value} = this.state;
+        const { navigation } = this.props;
+        const currentSong = navigation.getParam('currentSong', null);
+
         return (
             <View style = {styles.outerView}>
                 <View style={styles.mainView}>
                     <Text style={fontStyles.Songname}>
-                        Under The Bridge
+                        {currentSong.title}
                     </Text>
                     <Text style={fontStyles.artistName}>
-                        Red Hot Chili Peppers
+                        {currentSong.albumArtist}
                     </Text>
                     <Image
                         style = {styles.albumArt}
-                        source={require('./BSSM.jpg')}
+                        source={{
+                            uri: currentSong.artwork}}
                     />
 
 
@@ -70,32 +93,34 @@ export default class App extends React.Component {
 
                 <View style = {styles.buttonRow}>
 
-                    <TouchableOpacity style={styles.backButton}>
+                    <TouchableOpacity style={styles.backButton} onPress={
+                        ()=>this.playPrevious()}>
                         <Image
 
-
-                            source={require('./backButton.png')}
+                            source={require('../backButton.png')}
                         />
                     </TouchableOpacity>
 
 
 
 
-                    <TouchableOpacity style={styles.playPause}>
+                    <TouchableOpacity style={styles.playPause} onPress={
+                        ()=>this.playPauseSong()}>
                         <Image
 
 
-                            source={require('./pause.png')}
+                            source={require('../pause.png')}
                         />
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity style={styles.nextButton}>
+                    <TouchableOpacity style={styles.nextButton} onPress={
+                        ()=>this.playNext()}>
 
                         <Image
 
                             style={styles.pauseImage}
-                            source={require('./forwardButton.png')}
+                            source={require('../forwardButton.png')}
                         />
 
                     </TouchableOpacity>

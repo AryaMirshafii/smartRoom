@@ -74,7 +74,7 @@ export default class RoomView extends React.Component {
                             }>
                                 <Image
                                     style = {styles.cameraButton}
-                                    source={require('./cameraIcon.png')}
+                                    source={require('../cameraIcon.png')}
                                 />
                                 </TouchableOpacity>
 

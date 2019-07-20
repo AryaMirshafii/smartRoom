@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "add": "^2.0.6",
+    "or": "^0.2.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.5",
@@ -19,13 +21,16 @@
     "react-native-itunes": "^0.5.0",
     "react-native-modal": "^11.1.0",
     "react-native-music-control": "^0.10.4",
+    "react-native-notifications": "^2.0.0",
     "react-native-orientation-locker": "^1.1.6",
+    "react-native-push-notification": "^3.1.3",
     "react-native-slider": "^0.11.0",
     "react-native-vector-icons": "^6.4.2",
     "react-navigation": "^3.9.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",

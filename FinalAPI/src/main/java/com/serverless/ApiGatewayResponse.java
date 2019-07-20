@@ -63,6 +63,11 @@ public class ApiGatewayResponse {
 			return this;
 		}
 
+		@Override
+		public String toString() {
+			return rawBody;
+		}
+
 		public Builder setHeaders(Map<String, String> headers) {
 			this.headers = headers;
 			return this;

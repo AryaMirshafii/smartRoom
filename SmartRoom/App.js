@@ -23,8 +23,8 @@ import {
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import iTunes from 'react-native-itunes';
 
-import RoomView from "./RoomView";
-import MusicView from "./MusicView";
+import RoomView from "./screens/RoomView";
+import MusicView from "./screens/MusicView";
 import MusicListView from "./screens/MusicListView";
 
 import NewLogin from "./screens/NewLogin"
@@ -35,6 +35,7 @@ import AddRoomScreen from "./screens/AddRoomScreen"
 
 import CameraStreamView from "./screens/CameraStreamView"
 import AuthView from "./screens/AuthView"
+var PushNotification = require('react-native-push-notification');
 
 
 async function getUserName(){
@@ -43,8 +44,11 @@ async function getUserName(){
 }
 
 
-
-
+PushNotification.configure({
+    onNotification: function(notification) {
+        console.log( 'NOTIFICATION:', notification );
+    },
+});
 
 var Navigation =  createStackNavigator(
     {
@@ -54,10 +58,11 @@ var Navigation =  createStackNavigator(
       Third: {screen: RoomList},
       Fourth: {screen: RoomView},
       Fifth: {screen: MusicListView},
+        Music: {screen: MusicView},
       AddRoom:{screen: AddRoomScreen},
       CameraView:{screen: CameraStreamView},
-
     });
+
 export default createAppContainer(Navigation);
 
 
