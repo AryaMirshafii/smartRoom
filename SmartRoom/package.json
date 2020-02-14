@@ -30,7 +30,7 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "typeface-roboto": "0.0.54",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
